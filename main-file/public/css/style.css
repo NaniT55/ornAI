@@ -2355,7 +2355,7 @@ button {
 
 .tf__footer_content form button {
   position: absolute;
-  top: 6px;
+  top: 2px;
   right: 5px;
   background: #0a3981;
   color: var(--colorWhite);
@@ -2652,7 +2652,7 @@ button {
 
 /* popular services start */
 .tf__popular_services {
-  background: #dcdcdc;
+  background: #ffffff;
 }
 
 .tf__popular_service_single {
@@ -5523,7 +5523,7 @@ select.select_js.form-select {
 
 /* activities 3 start */
 .tf__activities_3 {
-  background: #f2f8f8;
+  background: #ffffff;
 }
 
 .tf__activities_3 .tf__heading_area h2 {
@@ -10526,6 +10526,10 @@ section.tf__counter_3 {
   background-color: #28a745;
   color: gray;
 }
+.orange {
+  background-color: #ff9500;
+  color: gray;
+}
 
 /* .grooming-container h1{
   text-align: center;
@@ -10960,7 +10964,7 @@ li span {
 
 .benifits {
   width: 100%;
-  height: 250px;
+  height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11015,7 +11019,7 @@ li span {
 
 .benifits4 {
   background-color: #00446e;
-  width: 100%;
+  width: 80vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11177,7 +11181,6 @@ input {
   cursor: pointer;
 }
 
-
 .input-error {
   border: 1px solid red;
 }
@@ -11193,6 +11196,9 @@ input {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Aligns items to the start horizontally */
-  justify-content: start;  /* Aligns items to the start vertically */
+  justify-content: start; /* Aligns items to the start vertically */
   text-align: start;
+}
+.franchise-slide {
+  height: 450px;
 }

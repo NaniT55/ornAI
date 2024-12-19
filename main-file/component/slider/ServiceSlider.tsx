@@ -51,7 +51,9 @@ const ServiceSlider = ({ services }: Props) => {
     >
       {services.map((item) => (
         <div className="col-xl-3" key={item._id}>
-          <div className={`tf__popular_service_single ${item.color}`}>
+          <div
+            className={`tf__popular_service_single franchise-slide ${item.color}`}
+          >
             <span>
               <i className={item.iClassName}></i>
             </span>

@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type EventType = {
   _id: string;
   imgSrc: {
@@ -75,7 +77,6 @@ export type ActivityType = {
   color: string;
 };
 
-
 // export type FaqType = {
 //   _id: string;
 //   color: string;
@@ -83,12 +84,11 @@ export type ActivityType = {
 //   answer: string[] | string;
 // };
 
-
 export type FaqType = {
   _id: string;
   color: string;
   question: string;
-  answer: { text: string }[] | string;
+  answer: string;
 };
 
 export type ServiceType = {

@@ -156,3 +156,4 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
 };
 
 export default AuthPopup;
+

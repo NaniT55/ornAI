@@ -10,6 +10,8 @@ import { ActivityData } from "@/Data/activityData";
 import ActivitySection2 from "../activity/ActivitySection2";
 import CourseSection2 from "../course/CourseSection2";
 import Franchise2 from "./Franchise2";
+import PopularServiceSection2 from "../service/PopularServiceSection2";
+import { servicesData } from "@/Data/franchisePartnerData";
 
 const Franchise = () => {
   return (
@@ -44,36 +46,7 @@ const Franchise = () => {
         </div>
       </section>
 
-      <section className="section3">
-        <div>
-          <h1>Why Partner with ORN-AI ?</h1>
-        </div>
-        <ul>
-          <li>Proven Track Record</li>
-          <p>
-            Leverage 10+ years of Aguila Consulting's recruitment expertise,
-            with thousands of candidates successfully placed globally across
-            diverse industries.
-          </p>
-          <li> Comprehensive Career Solutions</li>
-          <p>
-            Offer over 100 industry-aligned courses across high-demand fields,
-            complete with grooming, real-time project training, and expert-led
-            interview preparation until placement.
-          </p>
-          <li>Global Reach, Local Impact</li>
-          <p>
-            Tap into Aguila Consulting's international network to place
-            candidates worldwide, fulfilling ORN-AI's promise of "Train Locally,
-            Excel Globally.
-          </p>
-          <li>Guaranteed Success</li>
-          <p>
-            Provide subscribers with assured placements, setting your franchise
-            apart in a competitive market.
-          </p>
-        </ul>
-      </section>
+      {servicesData && <PopularServiceSection2 services={servicesData} />}
 
       <section className="section4">
         <div className="">
@@ -87,14 +60,14 @@ const Franchise = () => {
               markets with cutting-edge training and placement services.
             </p>
           </div>
-          <div className="benifits benifits2">
+          <div className="benifits benifits4">
             <h1>Exclusive Territory Rights</h1>
             <p>
               Be the sole ORN-AI franchise in your region, capturing local
               markets with cutting-edge training and placement services.
             </p>
           </div>
-          <div className="benifits benifits3">
+          <div className="benifits benifits1">
             <h1>Exclusive Territory Rights</h1>
             <p>
               Be the sole ORN-AI franchise in your region, capturing local
@@ -111,7 +84,7 @@ const Franchise = () => {
         </div>
       </section>
 
-      <section className="section5">
+      {/* <section className="section5">
         <div className="cards-container">
           {FranchiseData.map((step) => (
             <div key={step._id} className="card">
@@ -120,7 +93,7 @@ const Franchise = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       <section>
         {/* {CourseData && <CourseSection2 courseData={CourseData} />} */}

@@ -1,9 +1,11 @@
-'use client';
+"use client";
 import React, { useState } from "react";
 import Link from "next/link";
 import AuthPopup from "../loginpopup/Loginpopup";
+import { useRouter } from "next/navigation";
 
 function NewNavbar() {
+  const router = useRouter();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isAuthPopupOpen, setIsAuthPopupOpen] = useState(false);
 
@@ -11,35 +13,42 @@ function NewNavbar() {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const openAuthPopup = () => {
-    setIsAuthPopupOpen(true);
+  const toggleAuthPopup = () => {
+    setIsAuthPopupOpen(!isAuthPopupOpen);
   };
 
   const closeAuthPopup = () => {
     setIsAuthPopupOpen(false);
   };
 
+  const handleRoute = () => {
+    router.push("/");
+  };
+
   return (
     <div className="main-nav">
-      {/* Logo Section */}
       <div className="navbar-logo">
-        <img src="./images/orn-logo.png" alt="logo" />
+        <img
+          src="./images/orn-logo.png"
+          alt="logo"
+          className=""
+          onClick={handleRoute}
+        />
       </div>
-
-      {/* Navigation Links */}
       <div className="navbar-container">
+        {/* Navigation Links */}
         <ul className="navbar-links">
           <li className="navbar-item">
-            <a href="/" className="navbar-link">
+            <Link href="/" className="navbar-link">
               Home
-            </a>
+            </Link>
           </li>
           <li
             className="navbar-item navbar-dropdown"
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            <a
+            <Link
               href="#"
               className="navbar-link"
               onClick={(e) => {
@@ -48,49 +57,47 @@ function NewNavbar() {
               }}
             >
               Courses <i className="fas fa-chevron-down"></i>
-            </a>
+            </Link>
             <ul className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
               <li>
-                <Link href="/courses">All Courses</Link>
+                <Link href="/">All Courses</Link>
               </li>
               <li>
-                <Link href="/my-courses">My Course Details</Link>
+                <Link href="/">My Course Details</Link>
               </li>
             </ul>
           </li>
           <li className="navbar-item">
-            <a href="/groomingplans" className="navbar-link">
+            <Link href="/groomingplans" className="navbar-link">
               Grooming Plans
-            </a>
+            </Link>
           </li>
           <li className="navbar-item">
-            <a href="/Franchise" className="navbar-link">
+            <Link href="/Franchise" className="navbar-link">
               Franchise
-            </a>
+            </Link>
           </li>
           <li className="navbar-item">
-            <a href="/about" className="navbar-link">
+            <Link href="/" className="navbar-link">
               About Us
-            </a>
+            </Link>
           </li>
           <li className="navbar-item">
-            <a href="/contact" className="navbar-link">
+            <Link href="/contact" className="navbar-link">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
-
       {/* Buttons Section */}
       <div className="navbar-buttons">
         <button
           className="navbar-button register-button"
-          onClick={openAuthPopup}
+          onClick={toggleAuthPopup}
         >
           Register | Login
         </button>
       </div>
-
       {/* Auth Popup */}
       {isAuthPopupOpen && <AuthPopup closePopup={closeAuthPopup} />}
     </div>
