@@ -47,9 +47,8 @@ const Franchise = () => {
       </section>
 
       {servicesData && <PopularServiceSection2 services={servicesData} />}
-
       <section className="section4">
-        <div className="">
+        <div>
           <h1 className="heading">Our Franchise Model</h1>
         </div>
         <div className="benifit-div">
@@ -61,24 +60,24 @@ const Franchise = () => {
             </p>
           </div>
           <div className="benifits benifits4">
-            <h1>Exclusive Territory Rights</h1>
+            <h1>Proven Training Methodology</h1>
             <p>
-              Be the sole ORN-AI franchise in your region, capturing local
-              markets with cutting-edge training and placement services.
+              Implement tried-and-tested training programs, leveraging 10+ years
+              of Aguila Consulting expertise.
             </p>
           </div>
           <div className="benifits benifits1">
-            <h1>Exclusive Territory Rights</h1>
+            <h1>High-Demand Skill Courses</h1>
             <p>
-              Be the sole ORN-AI franchise in your region, capturing local
-              markets with cutting-edge training and placement services.
+              Offer in-demand courses tailored to current market trends,
+              ensuring career success for learners.
             </p>
           </div>
           <div className="benifits benifits4">
-            <h1>Exclusive Territory Rights</h1>
+            <h1>Comprehensive Support</h1>
             <p>
-              Be the sole ORN-AI franchise in your region, capturing local
-              markets with cutting-edge training and placement services.
+              Get unparalleled support from ORN-AI, including marketing, tech,
+              and placement assistance.
             </p>
           </div>
         </div>
