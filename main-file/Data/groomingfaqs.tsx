@@ -53,27 +53,5 @@ export const groomingFaqData: FaqType[] = [
     question: "How Does Grooming Work at ORN-AI?",
     answer:
       "Start with a free assessment to identify your needs. We then customize a grooming plan that includes:",
-    // },
-    // {
-    //   text: "Enhanced Communication: Sharpen your business communication and telephone skills.",
-    // },
-    // {
-    //   text: "Language Mastery: Expand your English proficiency and grammar.",
-    // },
-    // {
-    //   text: "Professional Writing Development: Command respect with superior writing and proposal skills.",
-    // },
-    // {
-    //   text: "Presentation Excellence: Boost your public speaking and presentation capabilities.",
-    // },
-    // {
-    //   text: "Technological Proficiency: Update your skills with the latest digital tools.",
-    // },
-    // {
-    //   text: "Career Advancement: Get tailored interview prep, CV branding, and strategic placement.",
-    // },
-    // {
-    //   text: "Hands-on Experience: Participate in internships and receive targeted placement assistance.",
-    //
   },
 ];

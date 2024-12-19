@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as Yup from "Yup";
+import * as yup from "yup";
 
 interface AuthPopupProps {
   closePopup: () => void;
@@ -12,14 +12,14 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
 
   // Yup validation schema for login and register
   const loginSchema = Yup.object().shape({
-    email: Yup.string().email("Invalid email format").required("Email is required"),
-    password: Yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
+    email: yup.string().email("Invalid email format").required("Email is required"),
+    password: yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
   });
 
-  const registerSchema = Yup.object().shape({
-    fullName: Yup.string().required("Full name is required"),
-    email: Yup.string().email("Invalid email format").required("Email is required"),
-    password: Yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
+  const registerSchema = yup.object().shape({
+    fullName: yup.string().required("Full name is required"),
+    email: yup.string().email("Invalid email format").required("Email is required"),
+    password: yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
   });
 
   const { register, handleSubmit, formState: { errors } } = useForm({
