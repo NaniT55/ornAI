@@ -11,18 +11,34 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
   const [isLogin, setIsLogin] = useState(true);
 
   // Yup validation schema for login and register
-  const loginSchema = Yup.object().shape({
-    email: yup.string().email("Invalid email format").required("Email is required"),
-    password: yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
+  const loginSchema = yup.object().shape({
+    email: yup
+      .string()
+      .email("Invalid email format")
+      .required("Email is required"),
+    password: yup
+      .string()
+      .min(6, "Password must be at least 6 characters")
+      .required("Password is required"),
   });
 
   const registerSchema = yup.object().shape({
     fullName: yup.string().required("Full name is required"),
-    email: yup.string().email("Invalid email format").required("Email is required"),
-    password: yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
+    email: yup
+      .string()
+      .email("Invalid email format")
+      .required("Email is required"),
+    password: yup
+      .string()
+      .min(6, "Password must be at least 6 characters")
+      .required("Password is required"),
   });
 
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     resolver: yupResolver(isLogin ? loginSchema : registerSchema),
   });
 
@@ -47,7 +63,11 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
         <button className="close-popup-btn" onClick={closePopup}>
           ✖
         </button>
-        <h2>{isLogin ? "Log in to continue your learning journey" : "Register and start learning"}</h2>
+        <h2>
+          {isLogin
+            ? "Log in to continue your learning journey"
+            : "Register and start learning"}
+        </h2>
 
         {/* Login Form */}
         {isLogin ? (
@@ -60,7 +80,9 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
                 placeholder="Enter your email"
                 className={errors.email ? "input-error" : ""}
               />
-              {errors.email && <p className="error-message">{errors.email.message}</p>}
+              {errors.email && (
+                <p className="error-message">{errors.email.message}</p>
+              )}
             </div>
             <div className="form-group">
               <label>Password:</label>
@@ -70,7 +92,9 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
                 placeholder="Enter your password"
                 className={errors.password ? "input-error" : ""}
               />
-              {errors.password && <p className="error-message">{errors.password.message}</p>}
+              {errors.password && (
+                <p className="error-message">{errors.password.message}</p>
+              )}
             </div>
             <button type="submit" className="submit-btn">
               Login
@@ -86,7 +110,9 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
                 placeholder="Enter your full name"
                 className={errors.fullName ? "input-error" : ""}
               />
-              {errors.fullName && <p className="error-message">{errors.fullName.message}</p>}
+              {errors.fullName && (
+                <p className="error-message">{errors.fullName.message}</p>
+              )}
             </div>
             <div className="form-group">
               <label>Email:</label>
@@ -96,7 +122,9 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
                 placeholder="Enter your email"
                 className={errors.email ? "input-error" : ""}
               />
-              {errors.email && <p className="error-message">{errors.email.message}</p>}
+              {errors.email && (
+                <p className="error-message">{errors.email.message}</p>
+              )}
             </div>
             <div className="form-group">
               <label>Password:</label>
@@ -106,7 +134,9 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
                 placeholder="Create a password"
                 className={errors.password ? "input-error" : ""}
               />
-              {errors.password && <p className="error-message">{errors.password.message}</p>}
+              {errors.password && (
+                <p className="error-message">{errors.password.message}</p>
+              )}
             </div>
             <button type="submit" className="submit-btn">
               Register
@@ -126,5 +156,4 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
 };
 
 export default AuthPopup;
-
 
