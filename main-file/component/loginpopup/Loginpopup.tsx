@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, FieldValues } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
@@ -11,7 +11,7 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
   const [isLogin, setIsLogin] = useState(true);
 
   // Yup validation schema for login and register
-  const loginSchema = yup.object().shape({
+  const loginSchema = yup.object({
     email: yup
       .string()
       .email("Invalid email format")
@@ -22,7 +22,7 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
       .required("Password is required"),
   });
 
-  const registerSchema = yup.object().shape({
+  const registerSchema = yup.object({
     fullName: yup.string().required("Full name is required"),
     email: yup
       .string()
@@ -34,11 +34,18 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
       .required("Password is required"),
   });
 
+  // Union type for login and register forms
+  type FormValues = {
+    email: string;
+    password: string;
+    fullName?: string; // Optional for login
+  };
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<FormValues>({
     resolver: yupResolver(isLogin ? loginSchema : registerSchema),
   });
 
@@ -46,12 +53,12 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
     setIsLogin(!isLogin);
   };
 
-  const handleLoginSubmit = (data: any) => {
+  const handleLoginSubmit = (data: FormValues) => {
     alert("Login submitted: " + JSON.stringify(data));
     closePopup();
   };
 
-  const handleRegisterSubmit = (data: any) => {
+  const handleRegisterSubmit = (data: FormValues) => {
     alert("Register submitted: " + JSON.stringify(data));
     closePopup();
   };
