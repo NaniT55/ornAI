@@ -10,7 +10,7 @@ const LoginSection = () => {
         <div className="row wow fadeInUp">
           <div className="col-xxl-5 col-xl-6 col-md-9 col-lg-7 m-auto">
             <div className="tf__login_area">
-              <h2>Welcome to Eduor!</h2>
+              <h2>Welcome to ORN-AI</h2>
               <p>sign in to continue</p>
               <LoginForm />
               <p className="or">
