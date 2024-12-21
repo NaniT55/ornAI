@@ -6,7 +6,7 @@ const {
 
 const router = express.Router();
 
-router.post("/contacts", submitContactInfo);
+router.post("/contact", submitContactInfo);
 
 // router.post("/login", login);
 
