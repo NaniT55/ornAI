@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 
@@ -7,8 +8,8 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleFormSubmit = async (data: any) => {
+    // e.preventDefault();
 
     if (!name || !email || !message) {
       toast.error("Please fill out all fields.", { position: "top-right" });

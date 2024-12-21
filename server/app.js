@@ -5,6 +5,7 @@ dotenv.config();
 
 //routes
 const authRoutes = require("./routes/authRoutes.js");
+const contactInfoRoutes = require("./routes/contactInfoRoutes.js");
 
 //database
 const connectToDB = require("./db/connectToDB.js");
@@ -24,6 +25,7 @@ app.use(
 );
 
 app.use("/auth", authRoutes);
+app.use("/contact", contactInfoRoutes);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

@@ -379,7 +379,7 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
       const response = await axios.post("http://localhost:8080/auth/login", data);
       if (response.status === 200) {
         localStorage.setItem("jwtToken", response.data.token);
-        router.push("/home-2");
+        router.push("/sign-in");
         toast.success("Logged in successfully!", { position: "top-right" });
       }
     } catch (err) {
