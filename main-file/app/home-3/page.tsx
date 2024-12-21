@@ -75,11 +75,14 @@ import { FaqData } from "@/Data/faqData";
 import { categoryMockData } from "@/Data/CategoryData";
 import { ActivityData } from "@/Data/activityData";
 // import ExploreORNAI from "@components/exploreornai/ExploreORNAI";
+import PopularServiceSection from "@/component/service/PopularServiceSection";
+
 import {
   ActivityType,
   BlogType,
   CategoryType,
   CourseType,
+  ServiceType,
   TeamType,
 } from "@/types";
 import {
@@ -87,6 +90,7 @@ import {
   getBlog,
   getCategory,
   getCourse,
+  getService,
   getTeam,
 } from "@/sanity/sanity.query";
 
@@ -95,6 +99,8 @@ export const metadata: Metadata = {
   description: "Developed by Vlack Solutions",
 };
 const page = async () => {
+  const serviceData: ServiceType[] = await getService();
+
   const teamData: TeamType[] = await getTeam();
   const activityData: ActivityType[] = await getActivity();
   const blogData: BlogType[] = await getBlog();
@@ -131,6 +137,7 @@ const page = async () => {
         faqSubHead={""}
         faqDescription={""}
       />
+      {serviceData && <PopularServiceSection serviceData={serviceData} />}
 
       {/* {blogData && <BlogSection2 blogData={blogData}/>} */}
       <FooterSection2 style="tf__footer_3" logo="images/footer_logo3.png" />
