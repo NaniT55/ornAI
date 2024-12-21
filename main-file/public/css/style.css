@@ -5111,7 +5111,7 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../images/franchise.jpeg);
+  background-image: url(../images/franchise.jpg);
   width: 100vw;
 }
 
@@ -11082,7 +11082,7 @@ li span {
   background-repeat: no-repeat !important;
   background-size: cover !important;
   position: relative;
-  background-image: url(../images/franchise.jpeg);
+  background-image: url(../images/franchise.jpg);
 }
 
 .franchise__banner_text {
@@ -11203,22 +11203,22 @@ input {
 }
 /* Keyframes for animation */
 @keyframes slideInLeft {
-  0% {
+  from {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-100%);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
 @keyframes slideInRight {
-  0% {
+  from {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(100%);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateX(0);
   }
@@ -11242,7 +11242,7 @@ input {
 }
 
 .benifits {
-  width: 90vw;
+  width: 80vw;
   padding: 20px;
   background-color: #f4f4f4;
   border-radius: 8px;
@@ -11280,24 +11280,24 @@ input {
 }
 
 .benifits h1 {
-  font-size: 24px;
+  font-size: 28px;
   color: #333;
-  margin-bottom: 15px;
+  font-size: bold;
 }
 
 .benifits p {
-  font-size: 16px;
+  font-size: 20px;
   color: #666;
   line-height: 1.5;
 }
 
-/* Optional: Adding hover effect */
-.benifits:hover {
-  transform: translateY(-10px);
-}
 .benifits1 h1 {
   color: var(--colorWhite);
 }
 .benifits1 p {
   color: var(--colorWhite);
+}
+
+.franchise-text:hover {
+  color: #ffffff;
 }
