@@ -330,7 +330,7 @@
 // export default AuthPopup;
 
 import React, { useState } from "react";
-import { useForm, FieldValues } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import * as yup from "yup";
@@ -347,13 +347,8 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
   console.log("Loading state initialized:", loading);
   const router = useRouter();
 
-<<<<<<< HEAD
   // Validation schemas
   const loginSchema = yup.object().shape({
-=======
-  // Yup validation schema for login and register
-  const loginSchema = yup.object({
->>>>>>> 7a43db623b87cc6197cad407554157eee44a3713
     email: yup
       .string()
       .email("Invalid email format")
@@ -364,7 +359,7 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
       .required("Password is required"),
   });
 
-  const registerSchema = yup.object({
+  const registerSchema = yup.object().shape({
     fullName: yup.string().required("Full name is required"),
     email: yup
       .string()
@@ -376,25 +371,11 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
       .required("Password is required"),
   });
 
-<<<<<<< HEAD
-=======
-  // Union type for login and register forms
-  type FormValues = {
-    email: string;
-    password: string;
-    fullName?: string; // Optional for login
-  };
-
->>>>>>> 7a43db623b87cc6197cad407554157eee44a3713
   const {
     register,
     handleSubmit,
     formState: { errors },
-<<<<<<< HEAD
   } = useForm({
-=======
-  } = useForm<FormValues>({
->>>>>>> 7a43db623b87cc6197cad407554157eee44a3713
     resolver: yupResolver(isLogin ? loginSchema : registerSchema),
   });
 
@@ -421,7 +402,6 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
     }
   };
 
-<<<<<<< HEAD
   const handleRegisterSubmit = async (data: any) => {
     setLoading(true);
     try {
@@ -444,16 +424,6 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
       setLoading(false);
       closePopup();
     }
-=======
-  const handleLoginSubmit = (data: FormValues) => {
-    alert("Login submitted: " + JSON.stringify(data));
-    closePopup();
-  };
-
-  const handleRegisterSubmit = (data: FormValues) => {
-    alert("Register submitted: " + JSON.stringify(data));
-    closePopup();
->>>>>>> 7a43db623b87cc6197cad407554157eee44a3713
   };
 
   return (
@@ -469,48 +439,12 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
             : "Register and start learning"}
         </h2>
 
-<<<<<<< HEAD
         <form
           onSubmit={handleSubmit(
             isLogin ? handleLoginSubmit : handleRegisterSubmit
           )}
         >
           {!isLogin && (
-=======
-        {/* Login Form */}
-        {isLogin ? (
-          <form onSubmit={handleSubmit(handleLoginSubmit)}>
-            <div className="form-group">
-              <label>Email:</label>
-              <input
-                type="email"
-                {...register("email")}
-                placeholder="Enter your email"
-                className={errors.email ? "input-error" : ""}
-              />
-              {errors.email && (
-                <p className="error-message">{errors.email.message}</p>
-              )}
-            </div>
-            <div className="form-group">
-              <label>Password:</label>
-              <input
-                type="password"
-                {...register("password")}
-                placeholder="Enter your password"
-                className={errors.password ? "input-error" : ""}
-              />
-              {errors.password && (
-                <p className="error-message">{errors.password.message}</p>
-              )}
-            </div>
-            <button type="submit" className="submit-btn">
-              Login
-            </button>
-          </form>
-        ) : (
-          <form onSubmit={handleSubmit(handleRegisterSubmit)}>
->>>>>>> 7a43db623b87cc6197cad407554157eee44a3713
             <div className="form-group">
               <label>Full Name:</label>
               <input
@@ -523,7 +457,6 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
                 <p className="error-message">{errors.fullName.message}</p>
               )}
             </div>
-<<<<<<< HEAD
           )}
           <div className="form-group">
             <label>Email:</label>
@@ -555,37 +488,6 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
             {loading ? "Submitting..." : isLogin ? "Login" : "Register"}
           </button>
         </form>
-=======
-            <div className="form-group">
-              <label>Email:</label>
-              <input
-                type="email"
-                {...register("email")}
-                placeholder="Enter your email"
-                className={errors.email ? "input-error" : ""}
-              />
-              {errors.email && (
-                <p className="error-message">{errors.email.message}</p>
-              )}
-            </div>
-            <div className="form-group">
-              <label>Password:</label>
-              <input
-                type="password"
-                {...register("password")}
-                placeholder="Create a password"
-                className={errors.password ? "input-error" : ""}
-              />
-              {errors.password && (
-                <p className="error-message">{errors.password.message}</p>
-              )}
-            </div>
-            <button type="submit" className="submit-btn">
-              Register
-            </button>
-          </form>
-        )}
->>>>>>> 7a43db623b87cc6197cad407554157eee44a3713
 
         <p className="toggle-text">
           {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
@@ -599,7 +501,3 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
 };
 
 export default AuthPopup;
-<<<<<<< HEAD
-=======
-
->>>>>>> 7a43db623b87cc6197cad407554157eee44a3713
