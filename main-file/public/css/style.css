@@ -435,6 +435,19 @@ button {
   -o-transition: all linear 0.3s;
 }
 
+.navbar-item.active .navbar-link {
+  background-color: #170d41;
+  color: #fff;
+  border-radius: 5px;
+  padding: 4px;
+  font-size: 16px;
+}
+
+
+
+
+
+
 .main_menu .navbar-nav {
   line-height: 90px;
   align-items: center;
@@ -11344,7 +11357,7 @@ input {
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
-.popup-text{
+.popup-text {
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 1rem;
@@ -11410,10 +11423,6 @@ input {
   color: #1f2937;
 }
 
-
-
-
-
 /* Welcome Component Styles */
 .welcome-container {
   display: flex;
@@ -11430,13 +11439,13 @@ input {
   margin-bottom: 20px;
 }
 
-.welcome-logo{
+.welcome-logo {
   width: 150px;
-  background-color: #170D41;
+  background-color: #170d41;
   border-radius: 50%;
   padding: 15px;
   margin: 0 auto;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .welcome-logo-image {
@@ -11469,7 +11478,7 @@ input {
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
-  background-color: #0A3981; /* Primary blue color */
+  background-color: #0a3981; /* Primary blue color */
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -11485,8 +11494,6 @@ input {
   background-color: #003f7f; /* Even darker blue for active state */
   transform: translateY(0); /* Reset movement on click */
 }
-
-
 
 /* Email Verification Component Styles */
 .email-verify-container {
@@ -11513,7 +11520,8 @@ p {
   margin-bottom: 20px;
 }
 
-.email-form, .otp-form {
+.email-form,
+.otp-form {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
