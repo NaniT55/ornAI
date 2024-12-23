@@ -11342,6 +11342,11 @@ input {
 .popup-heading {
   font-size: 1.25rem;
   font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.popup-text{
+  font-size: 1rem;
+  font-weight: 400;
   margin-bottom: 1rem;
 }
 
@@ -11403,4 +11408,175 @@ input {
 
 .popup-close:hover {
   color: #1f2937;
+}
+
+
+
+
+
+/* Welcome Component Styles */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f9f9f9; /* Light background */
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome-logo {
+  margin-bottom: 20px;
+}
+
+.welcome-logo{
+  width: 150px;
+  background-color: #170D41;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 0 auto;
+  margin-bottom: 20px; 
+}
+
+.welcome-logo-image {
+  max-width: 150px; /* Adjust the size of the logo */
+  height: auto;
+}
+
+.welcome-text h3 {
+  font-size: 1.2rem;
+  color: #555; /* Subtle color for the greeting */
+  margin-bottom: 10px;
+}
+
+.welcome-text h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222; /* Darker color for the main heading */
+  margin-bottom: 15px;
+}
+
+.welcome-text p {
+  font-size: 1rem;
+  color: #666; /* Slightly muted color for the description */
+  margin-bottom: 30px;
+}
+
+.welcome-button {
+  max-width: 300px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0A3981; /* Primary blue color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.welcome-button:hover {
+  background-color: #0056b3; /* Darker blue for hover state */
+  transform: translateY(-2px); /* Slight upward movement on hover */
+}
+
+.welcome-button:active {
+  background-color: #003f7f; /* Even darker blue for active state */
+  transform: translateY(0); /* Reset movement on click */
+}
+
+
+
+/* Email Verification Component Styles */
+.email-verify-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.email-form, .otp-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  outline-color: #007bff;
+  border-color: #007bff;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-send-otp {
+  background-color: #007bff;
+}
+
+.btn-send-otp:hover {
+  background-color: #0056b3;
+}
+
+.btn-verify-otp {
+  background-color: #28a745;
+}
+
+.btn-verify-otp:hover {
+  background-color: #218838;
+}
+
+.verification-success {
+  font-size: 1.1rem;
+  color: green;
+  margin-top: 20px;
 }

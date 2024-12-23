@@ -7,18 +7,19 @@ interface PopupFormProps {
 const UserDetailsForm: React.FC<PopupFormProps> = ({ onClose }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [details, setDetails] = useState("");
+  const [phone, setPhone] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log({ name, email, details }); // Handle the form submission
+    console.log({ name, email, phone }); // Handle the form submission
     onClose(); // Close the popup after submission
   };
 
   return (
     <div className="popup-overlay">
       <div className="popup-container">
-        <h2 className="popup-heading">Welcome!</h2>
+        <h2 className="popup-heading">Welcome to ORN-AI</h2>
+        <p className="popup-text">Please provide your details to continue</p>
         <form className="popup-form" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name">Name</label>
@@ -41,12 +42,14 @@ const UserDetailsForm: React.FC<PopupFormProps> = ({ onClose }) => {
             />
           </div>
           <div>
-            <label htmlFor="details">Details</label>
-            <textarea
-              id="details"
-              value={details}
-              onChange={(e) => setDetails(e.target.value)}
-            ></textarea>
+            <label htmlFor="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              required
+            />
           </div>
           <button type="submit">Submit</button>
         </form>
@@ -59,3 +62,4 @@ const UserDetailsForm: React.FC<PopupFormProps> = ({ onClose }) => {
 };
 
 export default UserDetailsForm;
+
