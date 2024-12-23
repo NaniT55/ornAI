@@ -7,21 +7,24 @@ import "@/public/css/style.css";
 import { ToastContainer } from "react-toastify";
 import { Providers } from "@/redux/provider";
 import NewNavbar from "@/component/navbar/NewNavbar";
+import type { Metadata } from "next";
+
+
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <Providers>
-         <body>
+        <body>
           {/* <NewNavbar /> */}
           {children}
-          <ToastContainer/>
-        </body> 
+          <ToastContainer />
+        </body>
       </Providers>
     </html>
-  )
+  );
 }

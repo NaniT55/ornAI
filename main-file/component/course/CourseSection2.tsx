@@ -20,11 +20,11 @@ const CourseSection2: React.FC<Props> = ({ courseData }) => {
           </div>
         </div>
         <div className="row">
-          {courseData?.slice(0, 6).map((item) => (
-            <div className="col-xl-4 col-md-6 wow fadeInUp" key={item._id}>
+          {courseData?.slice(0, 6).map((item, index) => (
+            <div className="col-xl-4 col-md-6 wow fadeInUp" key={index} >
               <div className="tf__single_courses">
                 {/* Course Image */}
-                <div className="tf__single_courses_img">
+                <div className="tf__single_courses_img" >
                   <img
                     src={item.imgSrc.image}
                     alt={item.imgSrc.alt || item.title}
