@@ -11301,3 +11301,92 @@ input {
 .franchise-text:hover {
   color: #ffffff;
 }
+
+
+
+/* Global Styling for Popup Form */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+}
+
+.popup-container {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30rem;
+  max-width: 90%;
+  position: relative;
+}
+
+.popup-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.popup-form label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.popup-form input,
+.popup-form textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.popup-form input:focus,
+.popup-form textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.popup-form button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.popup-form button:hover {
+  background-color: #2563eb;
+}
+
+.popup-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  color: #6b7280;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.popup-close:hover {
+  color: #1f2937;
+}

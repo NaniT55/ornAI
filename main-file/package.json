@@ -31,6 +31,7 @@
     "sanity": "^3.20.2",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.13",
+    "toastify": "^2.0.1",
     "yup": "^1.6.1"
   },
   "devDependencies": {

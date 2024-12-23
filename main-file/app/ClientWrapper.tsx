@@ -1,7 +1,7 @@
 "use client"; // Mark as a client component
 
-import React, { useEffect } from "react";
-import { useRouter } from "next/navigation"; // Next.js router
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import ScrollToTopButton from "@/component/utils/ScrollToTopButton";
 import VideoModal from "@/component/modal/VideoModal";
 import FooterSection2 from "@/component/footer/FooterSection2";
@@ -12,31 +12,23 @@ import ActivitySection2 from "@/component/activity/ActivitySection2";
 import CategorySection3 from "@/component/category/CategorySection3";
 import BannerSection3 from "@/component/banner/BannerSection3";
 import NewNavbar from "@/component/navbar/NewNavbar";
-// import { CourseData, FaqData, categoryMockData, ActivityData } from "@/Data";
 import { CourseData } from "@/Data/CourseData";
 import { FaqData } from "@/Data/faqData";
 import { categoryMockData } from "@/Data/CategoryData";
 import { ActivityData } from "@/Data/activityData";
-
-import {
-  ActivityType,
-  BlogType,
-  CategoryType,
-  CourseType,
-  TeamType,
-  ServiceType,
-} from "@/types";
-import {
-  getActivity,
-  getBlog,
-  getCategory,
-  getCourse,
-  getTeam,
-  getService,
-} from "@/sanity/sanity.query";
+import UserDetailsForm from "@/component/UserDetailsForm/UserDetailsForm";
 import PopularServiceSection from "@/component/service/PopularServiceSection";
 
-const ClientWrapper = ({
+interface ClientWrapperProps {
+  teamData: TeamType[];
+  activityData: ActivityType[];
+  blogData: BlogType[];
+  categoryData: CategoryType[];
+  courseData: CourseType[];
+  serviceData: ServiceType[];
+}
+
+const ClientWrapper: React.FC<ClientWrapperProps> = ({
   teamData,
   activityData,
   blogData,
@@ -44,16 +36,25 @@ const ClientWrapper = ({
   courseData,
   serviceData,
 }) => {
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
   const router = useRouter();
 
-  // Redirect logic
+  // Show popup after 3 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsPopupVisible(true);
+    }, 2000);
+    return () => clearTimeout(timer); // Cleanup the timer
+  }, []);
+
+  // Redirect logic based on token
   useEffect(() => {
     const token = localStorage.getItem("jwtToken");
 
     if (!token) {
       router.push("/"); // Stay on '/' if no token
     } else {
-      router.push("/home-2"); // Redirect to '/home' if token exists
+      router.push("/home"); // Redirect to '/home' if token exists
     }
   }, [router]);
 
@@ -63,6 +64,9 @@ const ClientWrapper = ({
         <NewNavbar />
         <BannerSection3 />
       </div>
+      {isPopupVisible && (
+        <UserDetailsForm onClose={() => setIsPopupVisible(false)} />
+      )}
       {categoryData && <CategorySection3 categoryData={categoryMockData} />}
       <AboutSection3 style="about_3" />
       {courseData && <CourseSection2 courseData={CourseData} />}
@@ -72,16 +76,14 @@ const ClientWrapper = ({
           activityData={ActivityData}
         />
       )}
-      {/* {serviceData && <PopularServiceSection serviceData={serviceData} />} */}
       <FaqSection
         img="images/faqs.jpg"
         faqData={FaqData}
         faqTitle="Why ORN-AI?"
-        faqSubHead={""}
-        faqDescription={""}
+        faqSubHead=""
+        faqDescription=""
       />
       {serviceData && <PopularServiceSection serviceData={serviceData} />}
-
       <FooterSection2 style="tf__footer_3" logo="images/footer_logo3.png" />
       <VideoModal />
       <ScrollToTopButton style="style-3" />
@@ -90,3 +92,4 @@ const ClientWrapper = ({
 };
 
 export default ClientWrapper;
+
