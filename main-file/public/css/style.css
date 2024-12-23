@@ -11076,13 +11076,13 @@ li span {
 }
 
 .franchise__banner {
-  margin-top: -300px;
+  margin-top: -280px;
   height: 700px;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   position: relative;
-  background-image: url(../images/franchise.jpg);
+  background-image: url(../images/franchise-banner.jpg);
 }
 
 .franchise__banner_text {
@@ -11201,7 +11201,6 @@ input {
 .franchise-slide {
   height: 450px;
 }
-/* Keyframes for animation */
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -11224,23 +11223,16 @@ input {
   }
 }
 
-.section4 {
+/* .section4 {
   padding: 5px;
   text-align: left;
-}
+} */
 
-.heading {
+/* .heading {
   font-size: 36px;
   margin-bottom: 20px;
-}
-
-.benifit-div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
+} */
+/* 
 .benifits {
   width: 80vw;
   padding: 20px;
@@ -11249,7 +11241,7 @@ input {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   opacity: 0;
   transition: transform 0.3s ease;
-}
+} */
 
 /* For the first two benefits (from left) */
 .benifits1 {
@@ -11286,12 +11278,12 @@ input {
 }
 
 .benifits p {
-  font-size: 20px;
+  font-size: 18px;
   color: #666;
   line-height: 1.5;
 }
 
-.benifits1 h1 {
+.benifits1 h2 {
   color: var(--colorWhite);
 }
 .benifits1 p {
@@ -11302,7 +11294,29 @@ input {
   color: #ffffff;
 }
 
-
+.icon1 {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 50px;
+  font-size: 30px;
+  border-radius: 50%;
+}
+.icon2 {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 50px;
+  font-size: 30px;
+  border-radius: 50%;
+}
+.benifits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 200px;
+  height: 165px;
+  margin: 25px;
+}
 
 /* Global Styling for Popup Form */
 .popup-overlay {
