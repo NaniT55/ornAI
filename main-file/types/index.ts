@@ -136,3 +136,10 @@ export type FranchiseType = {
   title: string;
   color: string;
 };
+
+export type franchiseBenifits = {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+};

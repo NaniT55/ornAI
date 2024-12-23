@@ -12,7 +12,12 @@ import CourseSection2 from "../course/CourseSection2";
 import Franchise2 from "./Franchise2";
 import PopularServiceSection2 from "../service/PopularServiceSection2";
 import { servicesData } from "@/Data/franchisePartnerData";
-
+import { FaMapMarkedAlt } from "react-icons/fa";
+import { franchiseBenifits } from "@/types";
+import { franchiseBenefits } from "@/Data/franchiseBenifits";
+interface Props {
+  benefit: franchiseBenifits[];
+}
 const Franchise = () => {
   return (
     <main className="main-franchise">
@@ -47,39 +52,108 @@ const Franchise = () => {
       </section>
 
       {servicesData && <PopularServiceSection2 services={servicesData} />}
-      <section className="section4">
+      {/* <section className="section4">
         <div>
           <h1 className="heading">Our Franchise Model</h1>
         </div>
         <div className="benifit-div">
-          <div className="benifits benifits1">
-            <h1>Exclusive Territory Rights</h1>
-            <p>
-              Be the sole ORN-AI franchise in your region, capturing local
-              markets with cutting-edge training and placement services.
-            </p>
+          <div className="benifits benifits1 benifits11">
+            <div className="icon1">
+              <FaMapMarkedAlt />
+            </div>
+            <div>
+              <h1>Exclusive Territory Rights</h1>
+              <p>
+                Be the sole ORN-AI franchise in your region, capturing local
+                markets with cutting-edge training and placement services.
+              </p>
+            </div>
           </div>
-          <div className="benifits benifits4">
-            <h1>Proven Training Methodology</h1>
-            <p>
-              Implement tried-and-tested training programs, leveraging 10+ years
-              of Aguila Consulting expertise.
-            </p>
+          <div className="benifits benifits4 benifits11">
+            <div>
+              <h1>Proven Training Methodology</h1>
+              <p>
+                Implement tried-and-tested training programs, leveraging 10+
+                years of Aguila Consulting expertise.
+              </p>
+            </div>
+            <div>
+              <div className="icon2">
+                <FaMapMarkedAlt />
+              </div>
+            </div>
           </div>
-          <div className="benifits benifits1">
-            <h1>High-Demand Skill Courses</h1>
-            <p>
-              Offer in-demand courses tailored to current market trends,
-              ensuring career success for learners.
-            </p>
+          <div className="benifits benifits1 benifits11">
+            <div className="icon1">
+              <FaMapMarkedAlt />
+            </div>
+            <div>
+              <h1>High-Demand Skill Courses</h1>
+              <p>
+                Offer in-demand courses tailored to current market trends,
+                ensuring career success for learners.
+              </p>
+            </div>
           </div>
-          <div className="benifits benifits4">
-            <h1>Comprehensive Support</h1>
-            <p>
-              Get unparalleled support from ORN-AI, including marketing, tech,
-              and placement assistance.
-            </p>
+          <div className="benifits benifits4 benifits11">
+            <div>
+              <h1>Comprehensive Support</h1>
+              <p>
+                Get unparalleled support from ORN-AI, including marketing, tech,
+                and placement assistance.
+              </p>
+            </div>
+            <div className="icon2">
+              <FaMapMarkedAlt />
+            </div>
           </div>
+        </div>
+      </section> */}
+      {/* <section className="section4">
+        <div>
+          <h1 className="heading">Our Franchise Model</h1>
+        </div>
+        <div className="benifits-div">
+          {franchiseBenefits.map((benefit, index) => (
+            <div
+              key={benefit.id}
+              className={`benifits ${
+                index % 2 === 0 ? "benifits1" : "benifits4"
+              }`}
+            >
+              <div className="icon1">{benefit.icon}</div>
+              <div>
+                <h2>{benefit.title}</h2>
+                <p>{benefit.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section> */}
+      <section className="section4">
+        <div>
+          <h1 className="heading">Our Franchise Model</h1>
+        </div>
+        <div className="benefits-div">
+          {franchiseBenefits.map((benefit, index) => (
+            <div
+              key={benefit.id}
+              className={`benifits ${
+                index % 2 === 0 ? "benifits1" : "benifits4"
+              }`}
+            >
+              {index % 2 === 1 ? null : (
+                <div className="icon1">{benefit.icon}</div>
+              )}
+              <div className="content">
+                <h2>{benefit.title}</h2>
+                <p>{benefit.description}</p>
+              </div>
+              {index % 2 === 1 ? (
+                <div className="icon2">{benefit.icon}</div>
+              ) : null}
+            </div>
+          ))}
         </div>
       </section>
 
