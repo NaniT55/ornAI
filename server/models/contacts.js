@@ -11,6 +11,11 @@ const contactSchema = new mongoose.Schema(
 
 module.exports = mongoose.model("Contact", contactSchema);
 
+
+
+
+
+
 // const { Schema, model } = require("mongoose");
 
 // const contactSchema = new Schema({
