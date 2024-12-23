@@ -36,7 +36,7 @@ const page = async () => {
   return (
     <Layout>
       <BreadcrumbSection header="About us" title="About us" />
-      <section className="tf__about_us_page mt_195 xs_mt_100">
+      {/* <section className="tf__about_us_page mt_195 xs_mt_100">
         <AboutSection3 style="" />
         {serviceData && <PopularServiceSection2 services={serviceData} />}
         {courseData && (
@@ -58,7 +58,7 @@ const page = async () => {
           />
         )}
         {blogData && <BlogSection blogData={blogData} />}
-      </section>
+      </section> */}
     </Layout>
   );
 };

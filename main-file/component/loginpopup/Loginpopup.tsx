@@ -341,6 +341,13 @@ interface AuthPopupProps {
   closePopup: () => void;
 }
 
+interface FormData {
+  fullName?: string;
+  email: string;
+  password: string;
+  confirmPassword?: string;
+}
+
 const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
   const [isLogin, setIsLogin] = useState(true);
   const [loading, setLoading] = useState(false);
@@ -371,7 +378,7 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
       .required("Password is required"),
     confirmPassword: yup
       .string()
-      .oneOf([yup.ref("password"), null], "Passwords must match")
+      .oneOf([yup.ref("password")], "Passwords must match")
       .required("confirm Password is required"),
   });
 
