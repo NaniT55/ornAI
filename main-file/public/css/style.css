@@ -5111,7 +5111,7 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../images/franchise.jpeg);
+  background-image: url(../images/franchise.jpg);
   width: 100vw;
 }
 
@@ -11082,7 +11082,7 @@ li span {
   background-repeat: no-repeat !important;
   background-size: cover !important;
   position: relative;
-  background-image: url(../images/franchise.jpeg);
+  background-image: url(../images/franchise.jpg);
 }
 
 .franchise__banner_text {
@@ -11124,10 +11124,9 @@ li span {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1001;
   width: 450px;
-  
 }
 
-.popup-content h2{
+.popup-content h2 {
   margin-bottom: 20px;
 }
 
@@ -11201,4 +11200,104 @@ input {
 }
 .franchise-slide {
   height: 450px;
+}
+/* Keyframes for animation */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.section4 {
+  padding: 5px;
+  text-align: left;
+}
+
+.heading {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.benifit-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.benifits {
+  width: 80vw;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: transform 0.3s ease;
+}
+
+/* For the first two benefits (from left) */
+.benifits1 {
+  background-color: #062961;
+  animation: slideInLeft 0.8s forwards;
+}
+
+.benifits4 {
+  background-color: #e0e6e0;
+  animation: slideInRight 0.8s forwards;
+}
+
+/* Add animation delay to stagger the elements */
+.benifits1:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.benifits4:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.benifits1:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.benifits4:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.benifits h1 {
+  font-size: 28px;
+  color: #333;
+  font-size: bold;
+}
+
+.benifits p {
+  font-size: 20px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.benifits1 h1 {
+  color: var(--colorWhite);
+}
+.benifits1 p {
+  color: var(--colorWhite);
+}
+
+.franchise-text:hover {
+  color: #ffffff;
 }
