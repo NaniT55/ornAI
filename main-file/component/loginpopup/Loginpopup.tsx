@@ -369,6 +369,10 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
       .string()
       .min(6, "Password must be at least 6 characters")
       .required("Password is required"),
+    confirmPassword: yup
+      .string()
+      .oneOf([yup.ref("password"), null], "Passwords must match")
+      .required("confirm Password is required"),
   });
 
   const {
@@ -484,6 +488,22 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
               <p className="error-message">{errors.password.message}</p>
             )}
           </div>
+          {!isLogin && (
+            <div className="form-group">
+              <label>confirm Password:</label>
+              <input
+                type="password"
+                {...register("confirmPassword")}
+                placeholder="Re-enter your Password"
+                className={errors.confirmPassword ? "input-error" : ""}
+              />
+              {errors.confirmPassword && (
+                <p className="error-message">
+                  {errors.confirmPassword.message}
+                </p>
+              )}
+            </div>
+          )}
           <button type="submit" className="submit-btn" disabled={loading}>
             {loading ? "Submitting..." : isLogin ? "Login" : "Register"}
           </button>
