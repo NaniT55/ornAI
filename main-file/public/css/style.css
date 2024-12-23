@@ -11123,7 +11123,7 @@ li span {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1001;
-  width: 450px;
+  width: 500px;
 }
 
 .popup-content h2 {
@@ -11131,13 +11131,15 @@ li span {
 }
 
 .close-popup-btn {
+  width: 20px;
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 10px; /* Align to the top-right corner */
   background: none;
   border: none;
   font-size: 18px;
   cursor: pointer;
+  z-index: 1002; /* Ensure it's above other content */
 }
 
 .form-group {
@@ -11158,7 +11160,7 @@ input {
 
 .submit-btn {
   width: 100%;
-  background-color: #007bff;
+  background-color: #0A3981;
   color: white;
   padding: 10px;
   border: none;
@@ -11321,93 +11323,89 @@ input {
 /* Global Styling for Popup Form */
 .popup-overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 50;
+  align-items: center;
+  z-index: 1000;
 }
 
 .popup-container {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 30rem;
+  position: relative; /* Ensures child elements with absolute positioning are aligned relative to this container */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
   max-width: 90%;
-  position: relative;
-}
-
-.popup-heading {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-.popup-text{
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-}
-
-.popup-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.popup-form label {
-  display: block;
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.popup-form input,
-.popup-form textarea {
-  width: 100%;
-  border: 1px solid #d1d5db;
-  border-radius: 0.375rem;
-  padding: 0.5rem;
-  font-size: 1rem;
-}
-
-.popup-form input:focus,
-.popup-form textarea:focus {
-  outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
-}
-
-.popup-form button {
-  background-color: #3b82f6;
-  color: white;
-  border: none;
-  border-radius: 0.375rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.popup-form button:hover {
-  background-color: #2563eb;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .popup-close {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    z-index: 1100 !important;
   font-size: 1.5rem;
   color: #6b7280;
   cursor: pointer;
   background: none;
   border: none;
   transition: color 0.2s ease-in-out;
+  /* z-index: 1100; Ensure it appears above other elements */
 }
 
 .popup-close:hover {
   color: #1f2937;
+}
+
+.popup-heading {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.popup-text {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #4b5563;
+}
+
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.popup-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.popup-form input {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.popup-form button {
+  background-color: #0A3981;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.popup-form button:hover {
+  background-color: #124d9f;
 }
 
 
@@ -11548,7 +11546,18 @@ label {
   border-color: #007bff;
 }
 
-button {
+.email-form button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.otp-form button {
   width: 100%;
   padding: 10px;
   font-size: 1rem;

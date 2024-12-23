@@ -24,8 +24,8 @@ const FooterSection2 = ({ style, logo } : Props) => {
             <p>
             Train Locally, Excel Globally
             </p>
-            <Link className="apply_btn" href="#">
-              Register Now
+            <Link className="apply_btn" href="/">
+              Know more
             </Link>
           </div>
         </div>
