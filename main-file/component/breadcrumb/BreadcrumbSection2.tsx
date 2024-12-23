@@ -9,7 +9,7 @@ type Props = {
 
 const BreadcrumbSection = ({ header, title }: Props) => {
   return (
-    <section className="tf__breadcrumb">
+    <section className="tf__breadcrumbs">
       <div className="container">
         <div className="row">
           <div className="col-12">

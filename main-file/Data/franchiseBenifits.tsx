@@ -13,6 +13,7 @@ export const franchiseBenefits = [
     description:
       "Be the sole ORN-AI franchise in your region, capturing local markets with cutting-edge training and placement services.",
     icon: <FaMapMarkedAlt size={40} color="#4CAF50" />,
+    image: "./images/about_bg.png",
   },
   {
     id: "2",

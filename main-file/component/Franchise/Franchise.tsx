@@ -28,7 +28,8 @@ const Franchise = () => {
               <div className="tf__banner_text wow fadeInUp">
                 {/* <h5>Welcome to ORN-AI</h5> */}
                 <h1>
-                  Train <span>Locally</span> <br /> Excel <span>Globally</span>
+                  Bringing Quality <span>Education</span> <br />
+                  Closer to <span>Communities</span>
                 </h1>
                 <p>
                   At ORN-AI, we're redefining career development by combining
@@ -109,32 +110,11 @@ const Franchise = () => {
           </div>
         </div>
       </section> */}
-      {/* <section className="section4">
-        <div>
-          <h1 className="heading">Our Franchise Model</h1>
-        </div>
-        <div className="benifits-div">
-          {franchiseBenefits.map((benefit, index) => (
-            <div
-              key={benefit.id}
-              className={`benifits ${
-                index % 2 === 0 ? "benifits1" : "benifits4"
-              }`}
-            >
-              <div className="icon1">{benefit.icon}</div>
-              <div>
-                <h2>{benefit.title}</h2>
-                <p>{benefit.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section> */}
       <section className="section4">
         <div>
           <h1 className="heading">Our Franchise Model</h1>
         </div>
-        <div className="benefits-div">
+        <div className="benifits-div">
           {franchiseBenefits.map((benefit, index) => (
             <div
               key={benefit.id}
