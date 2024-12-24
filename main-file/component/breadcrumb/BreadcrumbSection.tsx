@@ -5,11 +5,14 @@ import React from "react";
 type Props = {
   header: string;
   title: string;
+  showBackground?: boolean;
 };
 
-const BreadcrumbSection = ({ header, title }: Props) => {
+const BreadcrumbSection = ({ header, title, showBackground }: Props) => {
   return (
-    <section className="tf__breadcrumb">
+    <section
+      className={`tf__breadcrumb ${showBackground ? "with-bg" : "no-bg"}`}
+    >
       <div className="container">
         <div className="row">
           <div className="col-12">

@@ -20,7 +20,11 @@ const page = async () => {
   //   const blogData: BlogType[] = await getBlog();
   return (
     <Layout>
-      <BreadcrumbSection header="Grooming Plans" title="Grooming Plans" />
+      <BreadcrumbSection
+        header="Grooming Plans"
+        title="Grooming Plans"
+        showBackground={true}
+      />
       <section className="tf__about_us_page mt_195 xs_mt_100">
         <ORNGroomingPlans />
       </section>

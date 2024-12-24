@@ -40,7 +40,7 @@ const Franchise = () => {
                 </p>
                 <ul className="d-flex flex-wrap align-items-center">
                   <li>
-                    <Link className="common_btn_3" href="/courses">
+                    <Link className="common_btn_3" href="#">
                       Apply for a Franchise
                     </Link>
                   </li>

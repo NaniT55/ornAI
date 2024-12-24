@@ -339,7 +339,30 @@ button {
   position: relative;
 }
 
-.tf__breadcrumb .container::after {
+/* .tf__breadcrumb .container::after {
+  position: absolute;
+  content: "";
+  background: url(../images/breadcrumb_bg_img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 500px;
+  height: 515px;
+  top: -125px;
+  right: 0;
+  z-index: 1;
+} */
+
+/* .tf__breadcrumb {
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+  padding-top: 245px;
+  padding-bottom: 180px;
+  background-image: url(../images/breadcrumb_bg_1.jpg);
+} */
+
+.tf__breadcrumb.with-bg .container::after {
   position: absolute;
   content: "";
   background: url(../images/breadcrumb_bg_img.png);
@@ -353,54 +376,21 @@ button {
   z-index: 1;
 }
 
-.tf__breadcrumb {
+/* Applies background image when showBackground is true */
+.tf__breadcrumb.with-bg {
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: cover !important;
   padding-top: 245px;
   padding-bottom: 180px;
-  background-image: url(../images/breadcrumb_bg_1.jpg);
+  background-image: url(/images/breadcrumb_bg_1.jpg); /* Use public folder path */
 }
 
-.tf__breadcrumbs .container::after {
-  position: absolute;
-  content: "";
-  /* background: url(../images/breadcrumb_bg_img.png); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 500px;
-  height: 515px;
-  top: -125px;
-  right: 0;
-  z-index: 1;
-}
-
-.tf__breadcrumbs {
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-size: cover !important;
+/* Removes background when showBackground is false */
+.tf__breadcrumb.no-bg {
+  background: none !important;
   padding-top: 245px;
   padding-bottom: 180px;
-  background-image: url(../images/breadcrumb_bg_1.jpg);
-}
-
-.tf__breadcrumbs .container {
-  position: relative;
-}
-
-.tf__breadcrumbs .container::after {
-  position: absolute;
-  content: "";
-  /* background: url(../images/breadcrumb_bg_img.png); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 500px;
-  height: 515px;
-  top: -125px;
-  right: 0;
-  z-index: 1;
 }
 
 .tf__breadcrumb_text h2 {
@@ -756,8 +746,9 @@ button {
 }
 
 .tf__banner_text p {
-  font-size: 18px;
-  max-width: 45%;
+  font-size: 22px;
+  max-width: 65%;
+  line-height: 30px;
   margin: 18px 0px 50px 0px;
 }
 
@@ -11048,6 +11039,7 @@ li span {
 
 .benifits p {
   color: #fff;
+  line-height: 1.5px;
 }
 
 .benifits1 {
@@ -11055,6 +11047,8 @@ li span {
   border-top-right-radius: 220px;
   border-bottom-right-radius: 220px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   width: 80vw;
 }
@@ -11065,7 +11059,7 @@ li span {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   padding: 10px;
   border-top-left-radius: 250px;
   border-bottom-left-radius: 250px;
@@ -11291,7 +11285,7 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: start;
-  align-items: start;
+  /* align-items: start; */
   border-radius: 200px;
 }
 
@@ -11301,7 +11295,6 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: end;
-  align-items: end;
   text-align: end;
   border-radius: 200px;
 }
@@ -11331,7 +11324,9 @@ input {
 .benifits p {
   font-size: 25px;
   color: #666;
-  line-height: 1.5;
+  line-height: 1;
+  margin-top: 15px;
+  /* padding: 15px; */
 }
 
 .benifits1 h2 {
