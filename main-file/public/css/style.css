@@ -491,6 +491,20 @@ button {
   -o-transition: all linear 0.3s;
 }
 
+.navbar-item.active .navbar-link {
+  /* background-color: #170d41;
+  color: #fff;
+  border-radius: 5px;
+  padding: 4px;
+  font-size: 16px; */
+  border-bottom: 2px solid #170d41;
+}
+
+
+
+
+
+
 .main_menu .navbar-nav {
   line-height: 90px;
   align-items: center;
