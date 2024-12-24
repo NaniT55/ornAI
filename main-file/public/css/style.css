@@ -733,7 +733,8 @@ button {
 
 .tf__banner_text p {
   font-size: 18px;
-  max-width: 45%;
+  max-width: 65%;
+  line-height: 30px;
   margin: 18px 0px 50px 0px;
 }
 
