@@ -11566,7 +11566,7 @@ input {
   border-color: #007bff;
 }
 
-button {
+.email-verify-container button {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
