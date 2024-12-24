@@ -11517,14 +11517,14 @@ input {
   text-align: center;
 }
 
-h2 {
+.email-verify-container h2 {
   font-size: 2rem;
   font-weight: bold;
   color: #333;
   margin-bottom: 10px;
 }
 
-p {
+.email-verify-container p {
   font-size: 1rem;
   color: #666;
   margin-bottom: 20px;
@@ -11546,7 +11546,7 @@ p {
   text-align: left;
 }
 
-label {
+.email-verify-container label {
   font-size: 0.9rem;
   color: #333;
   margin-bottom: 5px;
