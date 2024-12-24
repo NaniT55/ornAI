@@ -341,6 +341,13 @@ interface AuthPopupProps {
   closePopup: () => void;
 }
 
+interface FormData {
+  fullName?: string;
+  email: string;
+  password: string;
+  confirmPassword?: string;
+}
+
 const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
   const [isLogin, setIsLogin] = useState(true);
   const [loading, setLoading] = useState(false);
@@ -371,7 +378,7 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
       .required("Password is required"),
     confirmPassword: yup
       .string()
-      .oneOf([yup.ref("password"), null], "Passwords must match")
+      .oneOf([yup.ref("password")], "Passwords must match")
       .required("confirm Password is required"),
   });
 
@@ -394,7 +401,8 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
       );
       if (response.status === 200) {
         localStorage.setItem("jwtToken", response.data.token);
-        router.push("/");
+        localStorage.setItem("loggedInUser", response.data.user.fullName);
+        router.push("/welcome");
         toast.success("Logged in successfully!", { position: "top-right" });
       }
     } catch (err) {
@@ -414,6 +422,7 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
         data
       );
       if (response.status === 201) {
+        localStorage.setItem("loggedInUser", response.data.fullName);
         toast.success("Registration successful. Please log in.", {
           position: "top-right",
         });
@@ -435,7 +444,7 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
       <div className="popup-overlay" onClick={closePopup}></div>
       <div className="popup-content">
         <button className="close-popup-btn" onClick={closePopup}>
-        &times;
+          &times;
         </button>
         <h2>
           {isLogin
