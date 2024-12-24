@@ -320,13 +320,19 @@ button {
 /* section heading css end */
 
 /* breascrumb css start */
-.tf__breadcrumb {
+.tf__breadcrumb.with-bg {
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: cover !important;
   padding-top: 245px;
   padding-bottom: 180px;
   background-image: url(../images/breadcrumb_bg_1.jpg);
+}
+
+.tf__breadcrumb.no-bg {
+  background: none !important;
+  padding-top: 245px;
+  padding-bottom: 180px;
 }
 
 .tf__breadcrumb .container {
@@ -337,6 +343,29 @@ button {
   position: absolute;
   content: "";
   background: url(../images/breadcrumb_bg_img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 500px;
+  height: 515px;
+  top: -125px;
+  right: 0;
+  z-index: 1;
+}
+
+.tf__breadcrumb {
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+  padding-top: 245px;
+  padding-bottom: 180px;
+  background-image: url(../images/breadcrumb_bg_1.jpg);
+}
+
+.tf__breadcrumbs .container::after {
+  position: absolute;
+  content: "";
+  /* background: url(../images/breadcrumb_bg_img.png); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
