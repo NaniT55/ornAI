@@ -528,7 +528,8 @@ button {
 }
 .navbar-brand {
   background-color: #170d41;
-  border-radius: 50%;
+  border-radius: 5%;
+  display: block;
 }
 .main_menu .navbar-brand {
   margin: 0;
@@ -4627,11 +4628,13 @@ button {
 
 .main_menu_2 .main_menu_2_area {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 65px;
   background: var(--colorWhite);
+  /* background-color: red; */
 }
 
 .main_menu_2 .navbar-brand {
@@ -10637,134 +10640,122 @@ section.tf__counter_3 {
 
 /* new navbar styles */
 
+/* Main Navbar Container */
+/* .main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  /* width: 85%;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0px auto;
+} */ 
+
 .main-nav {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  background: transparent;
-  width: 100%;
+  justify-content: space-between;
+  position: fixed;
+  top: 10px;
+  left: 50%; /* Position it in the center horizontally */
+  transform: translateX(-50%); /* Adjust it back by 50% of its width */
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  width: 85%;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  /* border: 0.5px solid gray; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Navbar Logo */
+.navbar-logo {
+  margin-right: auto;
+  cursor: pointer;
+  background-color: #170d41;
+  border-radius: 8px;
+  margin-left: 30px;
+}
+
+.navbar-logo img {
+  max-width: 160px;
 }
 
 /* Navbar Container */
 .navbar-container {
-  /* margin-top: 1.5rem; */
-  /* width: 80%; */
-  /* position:absolute; */
-  /* background: rgba(255, 255, 255, 0.8);  */
-  /* background-color: #858888; */
-  /* Semi-transparent background */
-  /* border: 1px solid gray; */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  background: transparent;
-
-  /* top: 12; */
-  left: 10;
-  border-radius: 58px;
+  flex-grow: 1;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 15px;
-  margin: 5px auto;
-}
-.nav-banner {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   justify-content: center;
 }
-/* Logo */
-/* .navbar-logo-image {
-  margin: 0;
-  padding: 10px 0px;
-  max-width: 95px;
-} */
 
-/* .navbar-logo{
-  /* padding: 5px 5px 5px 5px; */
-/* } */
-
-.navbar-logo {
-  display: flex;
-  background-color: #170d41;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  margin: 6px;
-  margin-left: 73px;
-  /* padding-left: -2px;
-  padding-right: -2px; */
-
-  border-radius: 50%;
-}
-
-.navbar-logo img {
-  max-width: 80px;
-  margin: 10px;
-}
-
-/* Navigation Links */
+/* Navbar Links */
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 24px;
   list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar-item a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-/* .navbar-link a:hover {
-  color: #0a3981 /* Indigo color on hover */
-/* } */
-
-/* .navbar-link.active::after{
-  opacity:1;
-  transform: scale(1);
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-
-
-} */
-
-/* Navbar Dropdown */
-.navbar-dropdown {
+.navbar-item {
   position: relative;
 }
 
 .navbar-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem; /* Space between text and icon */
-  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease-in-out;
 }
 
-/* Dropdown Menu */
+/* .navbar-link::after {
+  content: "";
+  position: absolute;
+  bottom: -3px; /* Adjust the spacing below the text */
+  /* left: 0;
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  /* background-color: #007bff; /* Underline color */
+  /* transition: width 0.3s ease-in-out;
+} */ 
+
+.navbar-link:hover::after {
+  width: 100%; /* Expand underline on hover */
+}
+
+.navbar-link:hover {
+  color: #007bff; /* Optional: Change text color on hover */
+}
+
+
+/* Dropdown */
+.navbar-dropdown {
+  position: relative;
+}
+
 .dropdown-menu {
   position: absolute;
-  top: 100%; /* Position dropdown below the link */
+  top: 110%; /* Spacing below the link */
   left: 0;
-  margin-top: 2px;
+  min-width: 200px;
   background: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* border-radius: 6px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+  z-index: 100;
 }
 
-/* Show Dropdown on Hover */
 .navbar-dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
@@ -10773,50 +10764,82 @@ section.tf__counter_3 {
 
 .dropdown-menu li {
   padding: 0.5rem 1rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
 }
 
 .dropdown-menu li:hover {
-  boreder-left: 2px solid black;
+  background: #f5f5f5;
 }
 
-/* Buttons */
+.dropdown-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Buttons Section */
 .navbar-buttons {
-  /* display: flex;
-  align-items: center; 
-  gap: 1rem; */
-  margin-right: 225px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .navbar-button {
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
   border: none;
   border-radius: 6px;
-  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.login-button {
-  background: #6366f1; /* Indigo */
-  color: white;
-}
-
-.login-button:hover {
-  background: #4f46e5;
-}
-
-.register-button {
-  background: #0a3981; /* Green */
-  color: white;
-}
-
-.register-button:hover {
-  background: #16a34a;
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .navbar-button:hover {
   transform: translateY(-2px);
 }
+
+.register-button {
+  background-color: #0A3981; /* Blue */
+}
+
+.register-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-container.open .navbar-links {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-buttons {
+    display: none;
+  }
+}
+
 
 .icon-1 {
   background-color: #89a8b2;
@@ -11464,7 +11487,7 @@ li span {
 }
 
 .auth-popup {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -11476,8 +11499,10 @@ li span {
   z-index: 1000;
 }
 
-.popup-overlay {
-  position: absolute;
+.auth-popup .popup-overlay {
+  position: fixed;
+  inset:0;
+  z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;
@@ -11485,17 +11510,18 @@ li span {
   background: transparent;
 }
 
-.popup-content {
+.auth-popup .popup-content {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30rem;
+  max-width: 90%;
   position: relative;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1001;
-  width: 450px;
+  z-index: 1001; 
 }
 
-.popup-content h2 {
+.auth-popup .popup-content h2 {
   margin-bottom: 20px;
 }
 
@@ -11558,6 +11584,7 @@ input {
   font-size: 12px;
   margin-top: 5px;
 }
+
 
 .tf__about_2_text ul li .text {
   /* border: 2px solid black; */
@@ -12031,3 +12058,5 @@ input {
   color: green;
   margin-top: 20px;
 }
+
+

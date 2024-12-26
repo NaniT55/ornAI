@@ -137,7 +137,7 @@ function NewNavbar() {
     <div className="main-nav">
       <div className="navbar-logo">
         <img
-          src="./images/orn-logo.png"
+          src="./images/orn-ai-rectangular-logo-1.png"
           alt="logo"
           className=""
           onClick={() => (window.location.href = "/")}
@@ -165,14 +165,14 @@ function NewNavbar() {
             >
               Courses <i className="fas fa-chevron-down"></i>
             </Link>
-            <ul className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
+            <ul className={`dropdown-menu tf__droap_menu ${isDropdownOpen ? "show" : ""}`}>
               <li>
-                <Link href="/" className={isActive("/")}>
+                <Link href="#" className={isActive("#")}>
                   All Courses
                 </Link>
               </li>
               <li>
-                <Link href="/" className={isActive("/")}>
+                <Link href="#" className={isActive("#")}>
                   My Course Details
                 </Link>
               </li>
