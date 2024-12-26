@@ -430,6 +430,66 @@ button {
   padding: 0;
 }
 
+
+
+
+@media (max-width: 1024px) {
+  .tf__breadcrumb.with-bg {
+    padding-top: 180px;
+    padding-bottom: 140px;
+  }
+
+  .tf__breadcrumb.with-bg .container::after {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: 10px;
+  }
+
+  .tf__breadcrumb_text h2 {
+    font-size: 45px;
+  }
+
+  .tf__breadcrumb_text ul li a {
+    font-size: 16px;
+  }
+}
+
+/* Responsive for mobile devices (480px and below) */
+@media (max-width: 768px) {
+  .tf__breadcrumb.with-bg {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    background-position: top center !important;
+  }
+
+  .tf__breadcrumb.with-bg .container::after {
+    width: 300px;
+    height: 300px;
+    top: -10px;
+    right: 0;
+    background-size: contain;
+  }
+
+  .tf__breadcrumb_text h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .tf__breadcrumb_text ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tf__breadcrumb_text ul li a {
+    font-size: 14px;
+    padding-right: 10px;
+  }
+}
+
+
+
+
 .tf__breadcrumb_text ul li:last-child a::after {
   display: none;
 }
@@ -10723,8 +10783,8 @@ li span {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  margin: 8rem;
-  margin-top: 10rem;
+  margin: 4rem;
+  margin-top: 5rem;
 }
 
 .enrolling-cards {
@@ -10891,6 +10951,62 @@ li span {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .enrolling-cards {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    gap: 1rem;
+  }
+
+  .grooming-cards {
+    margin: 4rem 2rem; /* Adjust margins for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .enrolling-cards {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+    gap: 1rem;
+  }
+
+  .grooming-card {
+    height: auto; /* Allow card height to adjust dynamically */
+    padding: 1rem; /* Adjust padding */
+  }
+
+  .grooming-cards h3 {
+    font-size: 1.5rem; /* Reduce font size */
+  }
+
+  .grooming-card h1 {
+    font-size: 1.2rem; /* Reduce font size for headings */
+  }
+
+  .grooming-card p {
+    font-size: 0.9rem; /* Reduce font size for paragraphs */
+  }
+
+  .cta-button {
+    font-size: 1rem; /* Adjust button font size */
+    padding: 0.6rem 1.5rem; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .grooming-cards {
+    margin: 2rem 1rem; /* Further reduce margins */
+  }
+
+  .grooming-cards h3 {
+    font-size: 1.2rem; /* Smaller font for heading */
+  }
+
+  .cta-button {
+    font-size: 0.9rem; /* Smaller button text */
+    padding: 0.5rem 1rem; /* Smaller button size */
   }
 }
 

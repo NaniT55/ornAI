@@ -59,7 +59,9 @@ const ContactPageSection = () => {
           <div className="col-xl-12 wow fadeInUp">
             <div className="tf__contact_map mt_100">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29199.78758207035!2d90.43684581929195!3d23.819543211524437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c62fce7d991f%3A0xacfaf1ac8e944c05!2sBasundhara%20Residential%20Area%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1667021568123!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2912000418796!2d78.38901877493615!3d17.445771083451334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9183fcc99575%3A0xf9358a5a5eabc95!2sVLACK%20SOLUTIONS%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1735194547787!5m2!1sen!2sin"
+                width="600"
+                height="450"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
