@@ -52,7 +52,7 @@ const FranchiseSlider = ({ FranchiseData }: Props) => {
     >
       {FranchiseData.map((item) => (
         <div className="col-xl-3" key={item._id}>
-          <div className={`tf__activities_item franchise-text ${item.color}`}>
+          <div className={`tf__activities_item  ${item.color}`}>
             {/* <span>
               <i className={item.iClassName}></i>
             </span> */}

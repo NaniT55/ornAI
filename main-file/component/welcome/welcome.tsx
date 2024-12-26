@@ -13,7 +13,7 @@ const Welcome: React.FC = () => {
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
+    localStorage.removeItem("jwtToken");
     localStorage.removeItem("loggedInUser");
 
     setTimeout(() => {

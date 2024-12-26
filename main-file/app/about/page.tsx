@@ -35,7 +35,11 @@ const page = async () => {
   const blogData: BlogType[] = await getBlog();
   return (
     <Layout>
-      <BreadcrumbSection header="About us" title="About us" />
+      <BreadcrumbSection
+        header="About us"
+        title="About us"
+        showBackground={true}
+      />
       {/* <section className="tf__about_us_page mt_195 xs_mt_100">
         <AboutSection3 style="" />
         {serviceData && <PopularServiceSection2 services={serviceData} />}
