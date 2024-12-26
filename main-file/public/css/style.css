@@ -11486,6 +11486,49 @@ li span {
   display: none;
 }
 
+@media (max-width: 992px) {
+  .franchise__banner {
+    margin-top: -250px; /* Adjust for smaller screens */
+    height: 500px; /* Reduced height for smaller screens */
+    background-image: url(../images/franchise-banner.jpg); /* New background image for tablets */
+  }
+
+  .franchise__banner_text {
+    font-size: 14px;
+    margin-left: 20px; /* Adjust left margin for tablet screens */
+  }
+}
+
+/* Media Query for mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .franchise__banner {
+    margin-top: -200px; /* Reduce margin for mobile */
+    height: 600px; /* Further reduce height for mobile */
+    /* background-image: url(../images/franchise-banner-mobile.jpg); */
+    background-image: none;
+  }
+
+  .franchise__banner_text {
+    font-size: 13px;
+    margin-left: 15px; /* Further adjust left margin for mobile screens */
+  }
+}
+
+/* Media Query for small mobile devices (max-width: 576px) */
+@media (max-width: 576px) {
+  .franchise__banner {
+    margin-top: -150px; /* Reduce margin for very small screens */
+    height: 650px; /* Smaller height for very small screens */
+    /* background-image: url(../images/franchise-banner-mobile.jpg);  */
+    background-image: none;
+  }
+
+  .franchise__banner_text {
+    font-size: 12px; /* Smaller font size for very small screens */
+    margin-left: 10px; /* Adjust left margin */
+  }
+}
+
 .auth-popup {
   position: absolute;
   top: 0;
@@ -11694,9 +11737,13 @@ input {
 }
 .benifits1 p {
   color: var(--colorWhite);
-  padding-right: 20px;
 }
-
+.benifits1 p {
+  padding-right: 10px;
+}
+.benifits4 p {
+  padding-left: 20px;
+}
 @media (max-width: 768px) {
   .benifits {
     max-width: 120%;
