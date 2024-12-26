@@ -402,7 +402,7 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
       if (response.status === 200) {
         localStorage.setItem("jwtToken", response.data.token);
         localStorage.setItem("loggedInUser", response.data.user.fullName);
-        router.push("/welcome");
+        router.push("/")
         toast.success("Logged in successfully!", { position: "top-right" });
       }
     } catch (err) {
@@ -423,6 +423,7 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
       );
       if (response.status === 201) {
         localStorage.setItem("loggedInUser", response.data.fullName);
+        router.push("/welcome");
         toast.success("Registration successful. Please log in.", {
           position: "top-right",
         });

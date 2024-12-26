@@ -17,7 +17,7 @@ const Welcome: React.FC = () => {
     localStorage.removeItem("loggedInUser");
 
     setTimeout(() => {
-      router.push("/sign-in");
+      router.push("/");
     }, 1000);
   };
 
