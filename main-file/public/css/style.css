@@ -430,9 +430,6 @@ button {
   padding: 0;
 }
 
-
-
-
 @media (max-width: 1024px) {
   .tf__breadcrumb.with-bg {
     padding-top: 180px;
@@ -486,9 +483,6 @@ button {
     padding-right: 10px;
   }
 }
-
-
-
 
 .tf__breadcrumb_text ul li:last-child a::after {
   display: none;
@@ -10649,11 +10643,11 @@ section.tf__counter_3 {
   top: 0;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-  /* width: 85%;
+/* width: 85%;
   padding: 1rem 2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 0px auto;
-} */ 
+} */
 
 .main-nav {
   display: flex;
@@ -10671,7 +10665,6 @@ section.tf__counter_3 {
   /* border: 0.5px solid gray; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
 
 /* Navbar Logo */
 .navbar-logo {
@@ -10720,12 +10713,12 @@ section.tf__counter_3 {
   content: "";
   position: absolute;
   bottom: -3px; /* Adjust the spacing below the text */
-  /* left: 0;
+/* left: 0;
   width: 0;
   height: 2px; /* Thickness of the underline */
-  /* background-color: #007bff; /* Underline color */
-  /* transition: width 0.3s ease-in-out;
-} */ 
+/* background-color: #007bff; /* Underline color */
+/* transition: width 0.3s ease-in-out;
+} */
 
 .navbar-link:hover::after {
   width: 100%; /* Expand underline on hover */
@@ -10734,7 +10727,6 @@ section.tf__counter_3 {
 .navbar-link:hover {
   color: #007bff; /* Optional: Change text color on hover */
 }
-
 
 /* Dropdown */
 .navbar-dropdown {
@@ -10804,7 +10796,7 @@ section.tf__counter_3 {
 }
 
 .register-button {
-  background-color: #0A3981; /* Blue */
+  background-color: #0a3981; /* Blue */
 }
 
 .register-button:hover {
@@ -10839,7 +10831,6 @@ section.tf__counter_3 {
     display: none;
   }
 }
-
 
 .icon-1 {
   background-color: #89a8b2;
@@ -11544,7 +11535,7 @@ li span {
 
 .auth-popup .popup-overlay {
   position: fixed;
-  inset:0;
+  inset: 0;
   z-index: 1000;
   top: 0;
   left: 0;
@@ -11561,7 +11552,7 @@ li span {
   width: 30rem;
   max-width: 90%;
   position: relative;
-  z-index: 1001; 
+  z-index: 1001;
 }
 
 .auth-popup .popup-content h2 {
@@ -11627,7 +11618,6 @@ input {
   font-size: 12px;
   margin-top: 5px;
 }
-
 
 .tf__about_2_text ul li .text {
   /* border: 2px solid black; */
@@ -12105,5 +12095,3 @@ input {
   color: green;
   margin-top: 20px;
 }
-
-
