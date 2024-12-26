@@ -1528,6 +1528,222 @@ button {
   width: 40px;
 }
 
+@media (max-width: 1200px) {
+  .testi_slider_2 .slick-dots li button,
+  .popular_service_slider .slick-dots li button,
+  .blog_slider .slick-dots li button,
+  .testimonial_slider .slick-dots li button,
+  .work_slider .slick-dots li button,
+  .event_slider .slick-dots li button {
+    width: 12px;
+    height: 6px;
+  }
+
+  .testi_slider_2 .slick-dots li.slick-active button,
+  .popular_service_slider .slick-dots li.slick-active button,
+  .blog_slider .slick-dots li.slick-active button,
+  .testimonial_slider .slick-dots li.slick-active button,
+  .work_slider .slick-dots li.slick-active button,
+  .event_slider .slick-dots li.slick-active button {
+    width: 30px;
+  }
+
+  .testi_slider_2 .slick-dots,
+  .popular_service_slider .slick-dots,
+  .blog_slider .slick-dots,
+  .testimonial_slider .slick-dots,
+  .work_slider .slick-dots,
+  .event_slider .slick-dots {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testi_slider_2 .slick-dots li button,
+  .popular_service_slider .slick-dots li button,
+  .blog_slider .slick-dots li button,
+  .testimonial_slider .slick-dots li button,
+  .work_slider .slick-dots li button,
+  .event_slider .slick-dots li button {
+    width: 10px;
+    height: 5px;
+  }
+
+  .testi_slider_2 .slick-dots li.slick-active button,
+  .popular_service_slider .slick-dots li.slick-active button,
+  .blog_slider .slick-dots li.slick-active button,
+  .testimonial_slider .slick-dots li.slick-active button,
+  .work_slider .slick-dots li.slick-active button,
+  .event_slider .slick-dots li.slick-active button {
+    width: 25px;
+  }
+
+  .testi_slider_2 .slick-dots,
+  .popular_service_slider .slick-dots,
+  .blog_slider .slick-dots,
+  .testimonial_slider .slick-dots,
+  .work_slider .slick-dots,
+  .event_slider .slick-dots {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .testi_slider_2 .slick-dots li button,
+  .popular_service_slider .slick-dots li button,
+  .blog_slider .slick-dots li button,
+  .testimonial_slider .slick-dots li button,
+  .work_slider .slick-dots li button,
+  .event_slider .slick-dots li button {
+    width: 8px;
+    height: 4px;
+  }
+
+  .testi_slider_2 .slick-dots li.slick-active button,
+  .popular_service_slider .slick-dots li.slick-active button,
+  .blog_slider .slick-dots li.slick-active button,
+  .testimonial_slider .slick-dots li.slick-active button,
+  .work_slider .slick-dots li.slick-active button,
+  .event_slider .slick-dots li.slick-active button {
+    width: 20px;
+  }
+
+  .testi_slider_2 .slick-dots,
+  .popular_service_slider .slick-dots,
+  .blog_slider .slick-dots,
+  .testimonial_slider .slick-dots,
+  .work_slider .slick-dots,
+  .event_slider .slick-dots {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .popular_service_slider .slick-slide {
+    padding: 15px;
+  }
+
+  .tf__activities_item h3 {
+    font-size: 16px;
+  }
+
+  .tf__activities_item p {
+    font-size: 13px;
+  }
+
+  .testi_slider_2 .slick-dots li button,
+  .popular_service_slider .slick-dots li button {
+    width: 12px;
+    height: 6px;
+  }
+
+  .testi_slider_2 .slick-dots li.slick-active button,
+  .popular_service_slider .slick-dots li.slick-active button {
+    width: 30px;
+  }
+
+  .testi_slider_2 .slick-dots {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .popular_service_slider .slick-slide {
+    padding: 10px;
+  }
+
+  .tf__activities_item {
+    padding: 15px;
+  }
+
+  .tf__activities_item h3 {
+    font-size: 14px;
+  }
+
+  .tf__activities_item p {
+    font-size: 12px;
+  }
+
+  .testi_slider_2 .slick-dots li button,
+  .popular_service_slider .slick-dots li button {
+    width: 10px;
+    height: 5px;
+  }
+
+  .testi_slider_2 .slick-dots li.slick-active button,
+  .popular_service_slider .slick-dots li.slick-active button {
+    width: 25px;
+  }
+
+  .testi_slider_2 .slick-dots {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popular_service_slider .slick-slide {
+    padding: 8px;
+  }
+
+  .tf__activities_item {
+    padding: 10px;
+  }
+
+  .tf__activities_item h3 {
+    font-size: 13px;
+
+    .tf__activities_item p {
+      font-size: 11px;
+    }
+
+    .testi_slider_2 .slick-dots li button,
+    .popular_service_slider .slick-dots li button {
+      width: 8px;
+      height: 4px;
+    }
+
+    .testi_slider_2 .slick-dots li.slick-active button,
+    .popular_service_slider .slick-dots li.slick-active button {
+      width: 20px;
+    }
+
+    .testi_slider_2 .slick-dots {
+      margin-top: 10px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .popular_service_slider .slick-slide {
+    padding: 5px;
+  }
+
+  .tf__activities_item {
+    padding: 8px;
+  }
+
+  .tf__activities_item h3 {
+    font-size: 12px;
+  }
+
+  .tf__activities_item p {
+    font-size: 10px;
+  }
+
+  .testi_slider_2 .slick-dots li button,
+  .popular_service_slider .slick-dots li button {
+    width: 6px;
+    height: 3px;
+  }
+
+  .testi_slider_2 .slick-dots li.slick-active button,
+  .popular_service_slider .slick-dots li.slick-active button {
+    width: 18px;
+  }
+
+  .testi_slider_2 .slick-dots {
+    margin-top: 5px;
+  }
+}
 /*----- EVENT END-----*/
 
 /*----- FAQ START-----*/
@@ -2713,7 +2929,8 @@ button {
 
 .tf__popular_service_single {
   /* background: url(../images/icon_bg.svg); */
-  height: 350px;
+  height: auto;
+  min-height: 350px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2751,7 +2968,7 @@ button {
 .tf__popular_service_single span {
   position: relative;
   z-index: 1;
-  display: block;
+  display: inline-block;
   width: 100px;
   height: 100px;
   line-height: 100px;
@@ -5219,10 +5436,10 @@ button {
 /* banner 3 end */
 
 /* popular service 3 start */
-.tf__popular_services_3 {
+/* .tf__popular_services_3 {
   position: relative;
   top: -160px;
-}
+} */
 
 .tf__popular_services_3 .tf__popular_service_single {
   border-bottom-left-radius: 0;
@@ -11334,6 +11551,87 @@ input {
 }
 .benifits1 p {
   color: var(--colorWhite);
+  padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .benifits {
+    max-width: 120%;
+  }
+
+  .icon1,
+  .icon2 {
+    font-size: 1.5rem;
+  }
+
+  .content h2 {
+    font-size: 1.25rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* @media (max-width: 480px) {
+  .section4 .heading {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  .benifits {
+    padding: 15px;
+  }
+
+  .icon1,
+  .icon2 {
+    font-size: 0.5rem !important; 
+    display: none;
+  }
+
+  .content h2 {
+    font-size: 1rem;
+  }
+
+  .content p {
+    font-size: 0.8rem;
+  }
+} */
+
+@media (max-width: 480px) {
+  .section4 {
+    padding: 15px;
+  }
+
+  .section4 .heading {
+    font-size: 1.5rem; /* Smaller font size for the heading */
+    margin-bottom: 10px; /* Adjust spacing */
+  }
+
+  .benifits-div {
+    gap: 10px; /* Reduce the gap between items */
+  }
+
+  .benifits {
+    padding: 10px; /* Smaller padding for compact view */
+    border-radius: 8px; /* Slightly smaller border radius */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for cleaner design */
+  }
+
+  .icon1,
+  .icon2 {
+    display: none;
+  }
+
+  .content h2 {
+    font-size: 1rem; /* Adjust font size of the title */
+    margin-bottom: 5px;
+  }
+
+  .content p {
+    font-size: 0.85rem; /* Slightly smaller font for descriptions */
+    line-height: 1.4; /* Maintain readability */
+  }
 }
 
 .franchise-text:hover {
