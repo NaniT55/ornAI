@@ -113,9 +113,10 @@ import AuthPopup from "../loginpopup/Loginpopup";
 import { usePathname } from "next/navigation";
 
 function NewNavbar() {
-  const pathname = usePathname(); // Get the current path
+  const pathname = usePathname();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isAuthPopupOpen, setIsAuthPopupOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -129,6 +130,10 @@ function NewNavbar() {
     setIsAuthPopupOpen(false);
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   const isActive = (path: string) => {
     return pathname === path ? "active" : "";
   };
@@ -139,12 +144,17 @@ function NewNavbar() {
         <img
           src="./images/orn-ai-rectangular-logo-1.png"
           alt="logo"
-          className=""
           onClick={() => (window.location.href = "/")}
         />
       </div>
-      <div className="navbar-container">
-        {/* Navigation Links */}
+
+      {/* Hamburger Menu Button */}
+      <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+        <i className={`fas ${isMobileMenuOpen ? "fa-times" : "fa-bars"}`}></i>
+      </button>
+
+      {/* Navbar Links */}
+      <div className={`navbar-container ${isMobileMenuOpen ? "open" : ""}`}>
         <ul className="navbar-links">
           <li className={`navbar-item ${isActive("/")}`}>
             <Link href="/" className="navbar-link">
@@ -199,16 +209,18 @@ function NewNavbar() {
             </Link>
           </li>
         </ul>
+
+        {/* Buttons Section */}
+        <div className="navbar-buttons">
+          <button
+            className="navbar-button register-button"
+            onClick={toggleAuthPopup}
+          >
+            Register | Login
+          </button>
+        </div>
       </div>
-      {/* Buttons Section */}
-      <div className="navbar-buttons">
-        <button
-          className="navbar-button register-button"
-          onClick={toggleAuthPopup}
-        >
-          Register | Login
-        </button>
-      </div>
+
       {/* Auth Popup */}
       {isAuthPopupOpen && <AuthPopup closePopup={closeAuthPopup} />}
     </div>
