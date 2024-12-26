@@ -18,6 +18,7 @@ import { categoryMockData } from "@/Data/CategoryData";
 import { ActivityData } from "@/Data/activityData";
 import UserDetailsForm from "@/component/UserDetailsForm/UserDetailsForm";
 import PopularServiceSection from "@/component/service/PopularServiceSection";
+import NavbarSection2 from "@/component/navbar/NavbarSection2";
 
 interface ClientWrapperProps {
   teamData: TeamType[];
@@ -60,6 +61,7 @@ const ClientWrapper: React.FC<ClientWrapperProps> = ({
 
   return (
     <div className="home_3">
+      {/* <NavbarSection2 /> */}
       <div className="nav-banner">
         <NewNavbar />
         <BannerSection3 />

@@ -65,8 +65,8 @@ const NavbarSection2 = () => {
         <div className="main_menu_2_area">
           <Link className="navbar-brand" href="/" >
             <img
-              src="images/orn-logo.png"
-              alt="Eduor"
+              src="images/orn-ai-rectangular-logo.png"
+              alt="Logo"
               className="img-fluid w-100"
              
             />
