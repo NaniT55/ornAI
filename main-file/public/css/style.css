@@ -1,9 +1,4 @@
-/* 
-***************************************
-Template Name: Eduor || Online Education Learning Next JS Template
-Version: 1.0
-Description: Eduor is a Online Education Next JS Template. It is designed for online education learning you are a you can discover many new awesome features in this template. Best for e-Learning, online courses, Online academy, Online Institute, Online School, College, University, and Online Instructor Websites. It fits perfectly on various displays and resolutions from regular desktop screens to tablets, iPads, iPhones and small mobile devices.
-***************************************
+/*
 
 CSS INDEX
 ===================================
@@ -10829,6 +10824,50 @@ section.tf__counter_3 {
   .mobile-menu-toggle {
     display: block;
   }
+
+  .navbar-dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    min-width: 200px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+    z-index: 100;
+  }
+  
+  .navbar-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .dropdown-menu li {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .dropdown-menu li:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-menu li:hover {
+    background: #f5f5f5;
+  }
+  
+  .dropdown-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -11521,7 +11560,7 @@ li span {
 }
 
 .franchise__banner {
-  margin-top: -350px;
+  margin-top: 80px;
   height: 700px;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -11541,7 +11580,7 @@ li span {
 
 @media (max-width: 992px) {
   .franchise__banner {
-    margin-top: -250px; /* Adjust for smaller screens */
+    margin-top: 500px; /* Adjust for smaller screens */
     height: 500px; /* Reduced height for smaller screens */
     background-image: url(../images/franchise-banner.jpg); /* New background image for tablets */
   }
@@ -11555,7 +11594,7 @@ li span {
 /* Media Query for mobile (max-width: 768px) */
 @media (max-width: 768px) {
   .franchise__banner {
-    margin-top: -200px; /* Reduce margin for mobile */
+    margin-top: 200px;
     height: 600px; /* Further reduce height for mobile */
     /* background-image: url(../images/franchise-banner-mobile.jpg); */
     background-image: none;
@@ -11570,7 +11609,7 @@ li span {
 /* Media Query for small mobile devices (max-width: 576px) */
 @media (max-width: 576px) {
   .franchise__banner {
-    margin-top: -150px; /* Reduce margin for very small screens */
+    margin-top: 150px; /* Reduce margin for very small screens */
     height: 650px; /* Smaller height for very small screens */
     /* background-image: url(../images/franchise-banner-mobile.jpg);  */
     background-image: none;
@@ -11579,6 +11618,10 @@ li span {
   .franchise__banner_text {
     font-size: 12px; /* Smaller font size for very small screens */
     margin-left: 10px; /* Adjust left margin */
+  }
+
+  .cards-container {
+    display:block;
   }
 }
 
