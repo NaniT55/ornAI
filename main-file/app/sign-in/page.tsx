@@ -5,8 +5,8 @@ import BreadcrumbSection from '@/component/breadcrumb/BreadcrumbSection'
 import LoginSection from '@/component/authentication/LoginSection'
 
 export const metadata: Metadata = {
-    title: "Eduor Sign In",
-    description: "Developed by Azizur Rahman",
+    title: "Log In",
+    description: "Developed by Vlack Solutions",
   }
 const page = () => {
   return (

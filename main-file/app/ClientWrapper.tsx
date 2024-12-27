@@ -55,17 +55,16 @@ const ClientWrapper: React.FC<ClientWrapperProps> = ({
     if (!token) {
       router.push("/"); // Stay on '/' if no token
     } else {
-      router.push("/home"); // Redirect to '/home' if token exists
+      router.push("/"); // Redirect to '/home' if token exists
     }
   }, [router]);
 
   return (
     <div className="home_3">
-      {/* <NavbarSection2 /> */}
-      <div className="nav-banner">
-        <NewNavbar />
+      
+        {/* <NewNavbar /> */}
         <BannerSection3 />
-      </div>
+      
       {isPopupVisible && (
         <UserDetailsForm onClose={() => setIsPopupVisible(false)} />
       )}
