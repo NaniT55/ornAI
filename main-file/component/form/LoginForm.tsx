@@ -1,38 +1,73 @@
 "use client";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import axios from "axios";
+import * as yup from "yup";
 
 const LoginForm = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
-    if (!password || !email) {
-      toast.error("Please fill out all fields.", { position: "top-right" });
-    } else {
-      // If the form is successfully submitted, show a success toast
-      toast.success("Logged In successfully!", {
-        position: "top-right",
-      });
-      setPassword("");
-      setEmail("");
+  const loginSchema = yup.object().shape({
+    email: yup
+      .string()
+      .email("Invalid email format")
+      .required("Email is required"),
+    password: yup
+      .string()
+      .min(6, "Password must be at least 6 characters")
+      .required("Password is required"),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ resolver: yupResolver(loginSchema) });
+
+  const handleLoginFormSubmit = async (data: any) => {
+    setLoading(true);
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/auth/login",
+        data
+      );
+      if (response.status === 200) {
+        localStorage.setItem("jwtToken", response.data.token);
+        localStorage.setItem("loggedInUser", response.data.user.fullName);
+        router.push("/");
+        toast.success("Logged in successfully!", { position: "top-right" });
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error("Invalid login credentials.", { position: "top-right" });
+    } finally {
+      setLoading(false);
     }
   };
+
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleSubmit(handleLoginFormSubmit)}>
       <div className="row">
         <div className="col-xl-12">
           <div className="tf__login_imput">
             <label>email</label>
             <input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
+              type="text"
+              {...register("email")}
+              placeholder="Enter Email"
+              className={errors.email ? "input-error" : ""}
             />
+            {errors.email && (
+              <p className="error-message">{errors.email.message}</p>
+            )}
           </div>
         </div>
         <div className="col-xl-12">
@@ -40,26 +75,17 @@ const LoginForm = () => {
             <label>password</label>
             <input
               type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
+              {...register("password")}
+              placeholder="Create a password"
+              className={errors.password ? "input-error" : ""}
             />
+            {errors.password && (
+              <p className="error-message">{errors.password.message}</p>
+            )}
           </div>
         </div>
         <div className="col-xl-12">
           <div className="tf__login_imput tf__login_check_area">
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                value=""
-                id="flexCheckDefault"
-              />
-              <label className="form-check-label" htmlFor="flexCheckDefault">
-                Remeber Me
-              </label>
-            </div>
             <a href="#">Forget Password ?</a>
           </div>
         </div>

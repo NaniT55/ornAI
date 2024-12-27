@@ -11,35 +11,11 @@ const LoginSection = () => {
           <div className="col-xxl-5 col-xl-6 col-md-9 col-lg-7 m-auto">
             <div className="tf__login_area">
               <h2>Welcome to ORN-AI</h2>
-              <p>sign in to continue</p>
+              <p>Login to continue</p>
               <LoginForm />
-              <p className="or">
-                <span>or</span>
-              </p>
-              <ul className="d-flex">
-                <li>
-                  <a href="#">
-                    <i className="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fab fa-google-plus-g"></i>
-                  </a>
-                </li>
-              </ul>
+
               <p className="create_account">
-                Dont’t have an aceount ?{" "}
+                Dont’t have an account ?{" "}
                 <Link href="/sign-up">Create Account</Link>
               </p>
             </div>

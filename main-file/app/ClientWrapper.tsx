@@ -19,6 +19,7 @@ import { ActivityData } from "@/Data/activityData";
 import UserDetailsForm from "@/component/UserDetailsForm/UserDetailsForm";
 import PopularServiceSection from "@/component/service/PopularServiceSection";
 import NavbarSection2 from "@/component/navbar/NavbarSection2";
+import { ActivityType, BlogType, CategoryType, CourseType, ServiceType, TeamType } from "@/types";
 
 interface ClientWrapperProps {
   teamData: TeamType[];
@@ -61,10 +62,14 @@ const ClientWrapper: React.FC<ClientWrapperProps> = ({
 
   return (
     <div className="home_3">
-      
-        {/* <NewNavbar /> */}
+
+        <NewNavbar />
         <BannerSection3 />
+ 
       
+       
+        <BannerSection3 />
+
       {isPopupVisible && (
         <UserDetailsForm onClose={() => setIsPopupVisible(false)} />
       )}
