@@ -103,6 +103,7 @@ import {
   getCourse,
   getTeam,
 } from "@/sanity/sanity.query";
+import NewNavbar from "@/component/navbar/NewNavbar";
 import { servicesData } from "@/Data/franchisePartnerData";
 
 export const metadata: Metadata = {
@@ -119,6 +120,8 @@ const Page = async () => {
  
 
   return (
+    <>
+      <NewNavbar />
     <ClientWrapper // Pass data to the client component
       teamData={teamData}
       activityData={activityData}
@@ -127,6 +130,7 @@ const Page = async () => {
       courseData={courseData}
       serviceData={servicesData}
     />
+    </>
   );
 };
 

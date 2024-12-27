@@ -62,11 +62,14 @@ const ClientWrapper: React.FC<ClientWrapperProps> = ({
 
   return (
     <div className="home_3">
-      {/* <NavbarSection2 /> */}
-      {/* <div className="nav-banner"> */}
+
         <NewNavbar />
         <BannerSection3 />
-      {/* </div> */}
+ 
+      
+       
+        <BannerSection3 />
+
       {isPopupVisible && (
         <UserDetailsForm onClose={() => setIsPopupVisible(false)} />
       )}
