@@ -224,9 +224,10 @@ import AuthPopup from "../Loginpopup/Loginpopup";
 import { usePathname } from "next/navigation";
 
 function NewNavbar() {
-  const pathname = usePathname(); // Get the current path
+  const pathname = usePathname();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isAuthPopupOpen, setIsAuthPopupOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
@@ -234,7 +235,17 @@ function NewNavbar() {
 
   const closeAuthPopup = () => setIsAuthPopupOpen(false);
 
+<<<<<<< HEAD
   const isActive = (path: string) => (pathname === path ? "active" : "");
+=======
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const isActive = (path: string) => {
+    return pathname === path ? "active" : "";
+  };
+>>>>>>> 6bf74af3dde12e9b8a619d1509b77a89a37cd3b1
 
   return (
     <div className="main-nav">
@@ -245,7 +256,18 @@ function NewNavbar() {
           onClick={() => (window.location.href = "/")}
         />
       </div>
+<<<<<<< HEAD
       <div className="navbar-container">
+=======
+
+      {/* Hamburger Menu Button */}
+      <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+        <i className={`fas ${isMobileMenuOpen ? "fa-times" : "fa-bars"}`}></i>
+      </button>
+
+      {/* Navbar Links */}
+      <div className={`navbar-container ${isMobileMenuOpen ? "open" : ""}`}>
+>>>>>>> 6bf74af3dde12e9b8a619d1509b77a89a37cd3b1
         <ul className="navbar-links">
           <li className={`navbar-item ${isActive("/")}`}>
             <Link href="/" className="navbar-link">
@@ -300,7 +322,18 @@ function NewNavbar() {
             </Link>
           </li>
         </ul>
+
+        {/* Buttons Section */}
+        <div className="navbar-buttons">
+          <button
+            className="navbar-button register-button"
+            onClick={toggleAuthPopup}
+          >
+            Register | Login
+          </button>
+        </div>
       </div>
+<<<<<<< HEAD
       <div className="navbar-buttons">
         <button
           className="navbar-button register-button"
@@ -310,6 +343,11 @@ function NewNavbar() {
         </button>
       </div>
       {/* {isAuthPopupOpen && <AuthPopup closePopup={closeAuthPopup} />} */}
+=======
+
+      {/* Auth Popup */}
+      {isAuthPopupOpen && <AuthPopup closePopup={closeAuthPopup} />}
+>>>>>>> 6bf74af3dde12e9b8a619d1509b77a89a37cd3b1
     </div>
   );
 }
