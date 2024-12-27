@@ -19,6 +19,7 @@ import { ActivityData } from "@/Data/activityData";
 import UserDetailsForm from "@/component/UserDetailsForm/UserDetailsForm";
 import PopularServiceSection from "@/component/service/PopularServiceSection";
 import NavbarSection2 from "@/component/navbar/NavbarSection2";
+import { ActivityType, BlogType, CategoryType, CourseType, ServiceType, TeamType } from "@/types";
 
 interface ClientWrapperProps {
   teamData: TeamType[];
@@ -55,17 +56,17 @@ const ClientWrapper: React.FC<ClientWrapperProps> = ({
     if (!token) {
       router.push("/"); // Stay on '/' if no token
     } else {
-      router.push("/home"); // Redirect to '/home' if token exists
+      router.push("/"); // Redirect to '/home' if token exists
     }
   }, [router]);
 
   return (
     <div className="home_3">
       {/* <NavbarSection2 /> */}
-      <div className="nav-banner">
+      {/* <div className="nav-banner"> */}
         <NewNavbar />
         <BannerSection3 />
-      </div>
+      {/* </div> */}
       {isPopupVisible && (
         <UserDetailsForm onClose={() => setIsPopupVisible(false)} />
       )}

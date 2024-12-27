@@ -111,12 +111,14 @@ import React, { useState } from "react";
 import Link from "next/link";
 import AuthPopup from "../loginpopup/Loginpopup";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 function NewNavbar() {
   const pathname = usePathname();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isAuthPopupOpen, setIsAuthPopupOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const router = useRouter();
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -136,6 +138,10 @@ function NewNavbar() {
 
   const isActive = (path: string) => {
     return pathname === path ? "active" : "";
+  };
+
+  const handleNavigate = () => {
+    router.push("/sign-in");
   };
 
   return (
@@ -175,7 +181,11 @@ function NewNavbar() {
             >
               Courses <i className="fas fa-chevron-down"></i>
             </Link>
-            <ul className={`dropdown-menu tf__droap_menu ${isDropdownOpen ? "show" : ""}`}>
+            <ul
+              className={`dropdown-menu tf__droap_menu ${
+                isDropdownOpen ? "show" : ""
+              }`}
+            >
               <li>
                 <Link href="#" className={isActive("#")}>
                   All Courses
@@ -214,7 +224,7 @@ function NewNavbar() {
         <div className="navbar-buttons">
           <button
             className="navbar-button register-button"
-            onClick={toggleAuthPopup}
+            onClick={handleNavigate}
           >
             Register | Login
           </button>

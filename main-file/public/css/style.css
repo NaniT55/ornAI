@@ -131,7 +131,8 @@ button {
 .common_btn_2,
 .common_btn_3 {
   padding: 15px 35px !important;
-  background: var(--colorPrimary) !important;
+  /* background: var(--colorPrimary) !important; */
+  background: #0a3981 !important ;
   color: var(--colorWhite) !important;
   text-transform: uppercase !important;
   font-size: 17px !important;
@@ -165,7 +166,7 @@ button {
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 #faa392;
+    box-shadow: 0 0 0 0 #2267d7;
   }
 }
 
@@ -6512,6 +6513,7 @@ select.select_js.form-select {
   padding: 50px;
   overflow: hidden;
   border-radius: 5px;
+  margin-top: -140px;
 }
 
 .tf__login_area h2 {
@@ -6565,7 +6567,7 @@ select.select_js.form-select {
 
 .form-check-input:focus {
   /* border-color: var(--colorPrimary); */
-  border-color: ;
+  /* border-color: ; */
   box-shadow: none;
 }
 
@@ -6581,7 +6583,7 @@ select.select_js.form-select {
   text-transform: capitalize;
   font-size: 16px;
   font-weight: 400;
-  color: red;
+  color: #0a3981;
   transition: all 0.3s linear 0s;
   -webkit-transition: all 0.3s linear 0s;
   -moz-transition: all 0.3s linear 0s;
@@ -6659,7 +6661,8 @@ select.select_js.form-select {
 }
 
 .tf__login_area .create_account a {
-  color: var(--colorPrimary);
+  /* color: var(--colorPrimary); */
+  color: #0a3981;
   text-transform: capitalize;
   font-weight: 500;
   transition: all linear 0.3s;
@@ -6671,6 +6674,10 @@ select.select_js.form-select {
 
 .tf__login_area .create_account a:hover {
   color: var(--colorBlack);
+}
+
+.error-message {
+  color: red;
 }
 
 /* ==================================
@@ -10834,7 +10841,7 @@ section.tf__counter_3 {
     display: flex;
   }
 
-  .navbar-logo{
+  .navbar-logo {
     margin-left: 10px;
   }
   .navbar-links {
@@ -10842,7 +10849,7 @@ section.tf__counter_3 {
     gap: 1rem;
   }
 
-  .navbar-logo{
+  .navbar-logo {
     margin-left: 10px;
   }
 
@@ -10863,7 +10870,7 @@ section.tf__counter_3 {
     flex-wrap: wrap;
     padding: 1rem;
   }
-  .navbar-logo{
+  .navbar-logo {
     margin-left: 10px;
   }
 
@@ -10912,26 +10919,26 @@ section.tf__counter_3 {
     transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
     z-index: 100;
   }
-  
+
   .navbar-dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
-  
+
   .dropdown-menu li {
     padding: 0.5rem 1rem;
     border-bottom: 1px solid #eaeaea;
   }
-  
+
   .dropdown-menu li:last-child {
     border-bottom: none;
   }
-  
+
   .dropdown-menu li:hover {
     background: #f5f5f5;
   }
-  
+
   .dropdown-menu a {
     text-decoration: none;
     color: #333;
@@ -10945,7 +10952,7 @@ section.tf__counter_3 {
     padding: 1rem 1.5rem;
   }
 
-  .navbar-logo{
+  .navbar-logo {
     margin-left: 10px;
   }
 
@@ -10983,26 +10990,26 @@ section.tf__counter_3 {
     transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
     z-index: 100;
   }
-  
+
   .navbar-dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
-  
+
   .dropdown-menu li {
     padding: 0.5rem 1rem;
     border-bottom: 1px solid #eaeaea;
   }
-  
+
   .dropdown-menu li:last-child {
     border-bottom: none;
   }
-  
+
   .dropdown-menu li:hover {
     background: #f5f5f5;
   }
-  
+
   .dropdown-menu a {
     text-decoration: none;
     color: #333;
@@ -11034,7 +11041,7 @@ section.tf__counter_3 {
 
   .navbar-links {
     flex-direction: column;
-    
+
     gap: 1rem;
   }
 
@@ -11075,26 +11082,26 @@ section.tf__counter_3 {
     transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
     z-index: 100;
   }
-  
+
   .navbar-dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
-  
+
   .dropdown-menu li {
     padding: 0.5rem 1rem;
     border-bottom: 1px solid #eaeaea;
   }
-  
+
   .dropdown-menu li:last-child {
     border-bottom: none;
   }
-  
+
   .dropdown-menu li:hover {
     background: #f5f5f5;
   }
-  
+
   .dropdown-menu a {
     text-decoration: none;
     color: #333;
@@ -11108,7 +11115,7 @@ section.tf__counter_3 {
     display: none; /* Hidden by default */
     flex-direction: column;
     align-items: flex-center;
-    justify-content: center; 
+    justify-content: center;
     gap: 1rem;
     background-color: white;
     position: absolute;
@@ -11120,7 +11127,7 @@ section.tf__counter_3 {
     z-index: 100; /* Ensure it's on top */
   }
 
-  .navbar-logo{
+  .navbar-logo {
     margin-left: 10px;
   }
 
@@ -11165,26 +11172,26 @@ section.tf__counter_3 {
     transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
     z-index: 100;
   }
-  
+
   .navbar-dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
-  
+
   .dropdown-menu li {
     padding: 0.5rem 1rem;
     border-bottom: 1px solid #eaeaea;
   }
-  
+
   .dropdown-menu li:last-child {
     border-bottom: none;
   }
-  
+
   .dropdown-menu li:hover {
     background: #f5f5f5;
   }
-  
+
   .dropdown-menu a {
     text-decoration: none;
     color: #333;
