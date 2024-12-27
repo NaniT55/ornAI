@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Navlink from "./Navlink";
 import SubNavlink from "./SubNavlink";
 import { useAppSelector } from "@/redux/hooks";
-import AuthPopup from "../loginpopup/Loginpopup";
+import AuthPopup from "../Loginpopup/Loginpopup";
 
 type Props = {
   position: string;
@@ -13,7 +13,9 @@ type Props = {
 };
 
 const NavigationSection = ({ position, btnPosition, navRef }: Props) => {
-  const isMobileNavOpen = useAppSelector((state) => state.mobileNav.isMobileNavOpen);
+  const isMobileNavOpen = useAppSelector(
+    (state) => state.mobileNav.isMobileNavOpen
+  );
   const [isAuthPopupOpen, setIsAuthPopupOpen] = useState(false);
 
   const toggleAuthPopup = () => {
@@ -40,7 +42,13 @@ const NavigationSection = ({ position, btnPosition, navRef }: Props) => {
 
         {/* Courses Dropdown */}
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a
+            className="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
             Courses <i className="fa fa-angle-down"></i>
           </a>
           <ul className="tf__droap_menu">

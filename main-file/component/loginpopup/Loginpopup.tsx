@@ -402,7 +402,7 @@ const AuthPopup: React.FC<AuthPopupProps> = ({ closePopup }) => {
       if (response.status === 200) {
         localStorage.setItem("jwtToken", response.data.token);
         localStorage.setItem("loggedInUser", response.data.user.fullName);
-        router.push("/")
+        router.push("/");
         toast.success("Logged in successfully!", { position: "top-right" });
       }
     } catch (err) {
