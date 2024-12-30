@@ -18,6 +18,7 @@ import { franchiseBenefits } from "@/Data/franchiseBenifits";
 import FranchiseForm from "../form/FranchiseForm";
 import FranchiseModel from "./FranchiseModel";
 import PopularServiceSection from "@/component/service/PopularServiceSection";
+import FranchisePartner from "./FranchisePartner";
 
 interface Props {
   benefit: franchiseBenifits[];
@@ -55,17 +56,17 @@ const Franchise = () => {
           </div>
         </div>
       </section>
-      {servicesData && <PopularServiceSection2 services={servicesData} />}
+      {/* /* {servicesData && <PopularServiceSection2 services={servicesData} />}  */}
+      {servicesData && <FranchisePartner services={servicesData} />}
       <section className="franchise-section">
-      <div className="franchise-model">
-        <FranchiseModel />
-      </div>
-      <div className="franchise-form">
-        <FranchiseForm />
-      </div>
-    </section>
+        <div className="franchise-model">
+          <FranchiseModel />
+        </div>
+        <div className="franchise-form">
+          <FranchiseForm />
+        </div>
+      </section>
 
-      
       {/* <section className="section4">
         <div>
           <h1 className="heading">Our Franchise Model</h1>

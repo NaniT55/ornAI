@@ -91,13 +91,23 @@ export type FaqType = {
   answer: string;
 };
 
-export type ServiceType = {
+// export type ServiceType = {
+//   _id: string;
+//   iClassName: string;
+//   title: string;
+//   desc: string;
+//   color: string;
+//   icon: string;
+// };
+
+export interface ServiceType {
   _id: string;
-  iClassName: string;
+  iClassName?: string; // Optional if using custom icons
   title: string;
   desc: string;
   color: string;
-};
+  icon?: React.ReactNode; // Allow JSX elements
+}
 
 export type TestimonialType = {
   _id: string;
