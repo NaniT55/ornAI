@@ -4726,7 +4726,7 @@ button {
 
 /* banner 2 start */
 .tf__banner_2 {
-  margin-top: -65px;
+  margin-top: -145px;
   height: 850px;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -5494,10 +5494,10 @@ button {
 /* banner 3 end */
 
 /* popular service 3 start */
-/* .tf__popular_services_3 {
+.tf__popular_services_3 {
   position: relative;
   top: -160px;
-} */
+}
 
 .tf__popular_services_3 .tf__popular_service_single {
   border-bottom-left-radius: 0;
@@ -6513,7 +6513,7 @@ select.select_js.form-select {
   padding: 50px;
   overflow: hidden;
   border-radius: 5px;
-  margin-top: -140px;
+  margin-top: -70px;
 }
 
 .tf__login_area h2 {
@@ -10659,18 +10659,18 @@ section.tf__counter_3 {
 .main-nav {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  position: relative;
-  top: 10px;
-  left: 50%; /* Position it in the center horizontally */
-  transform: translateX(-50%); /* Adjust it back by 50% of its width */
-  z-index: 1000;
+  justify-content: space-between;
+  z-index: 1001;
   background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
   width: 85%;
-  padding: 1rem 2rem;
+  padding: 15px 20px;
   border-radius: 40px;
   /* border: 0.5px solid gray; */
+  margin: 0 auto;
+  position: sticky;
+  top: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: -83px;
 }
 
 /* Navbar Logo */
@@ -10719,6 +10719,11 @@ section.tf__counter_3 {
   transition: color 0.3s ease-in-out;
 }
 
+.navbar-link i:hover {
+  rotate: 180deg;
+  
+}
+
 /* .navbar-link::after {
   content: "";
   position: absolute;
@@ -10745,7 +10750,7 @@ section.tf__counter_3 {
 
 .dropdown-menu {
   position: absolute;
-  top: 110%; /* Spacing below the link */
+  top: 90%; /* Spacing below the link */
   left: 0;
   min-width: 200px;
   background: white;
@@ -10808,6 +10813,7 @@ section.tf__counter_3 {
 
 .register-button {
   background-color: #0a3981; /* Blue */
+  margin-left: 90px;
 }
 
 .register-button:hover {
@@ -11978,6 +11984,7 @@ input {
 
 .input-error {
   border: 1px solid red;
+ 
 }
 
 .error-message {
