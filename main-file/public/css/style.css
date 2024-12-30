@@ -10657,7 +10657,7 @@ section.tf__counter_3 {
   justify-content: space-between;
   z-index: 1001;
   background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-  width: 85%;
+  width: 80%;
   padding: 15px 20px;
   border-radius: 40px;
   /* border: 0.5px solid gray; */
@@ -10674,7 +10674,7 @@ section.tf__counter_3 {
   cursor: pointer;
   background-color: #170d41;
   border-radius: 8px;
-  margin-left: 30px;
+  margin-left: 10px;
 }
 
 .navbar-logo img {
@@ -10699,6 +10699,7 @@ section.tf__counter_3 {
   gap: 2rem;
   margin: 0;
   padding: 0;
+  margin-left: 35px;
 }
 
 .navbar-item {
@@ -10788,7 +10789,7 @@ section.tf__counter_3 {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-left: 60px;
+  /* margin-left: 60px; */
 }
 
 .navbar-button {
@@ -12717,3 +12718,112 @@ input {
 .franchise-model hr{
 border-bottom: 2px solid #9AA6B2;
 }
+
+
+
+/* Mobile Devices (Up to 600px) */
+@media (max-width: 600px) {
+  .franchise-section {
+    flex-direction: column; /* Stack components vertically */
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .franchise-model, .franchise-form {
+    flex: none; /* Full-width components */
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .form-container {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  .form-container button {
+    width: 100%; /* Full-width button */
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet Devices (601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .franchise-section {
+    flex-direction: column; /* Stack components vertically */
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .franchise-model, .franchise-form {
+    flex: none;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .form-container {
+    grid-template-columns: 1fr 1fr; /* Maintain two columns */
+    gap: 0.8rem;
+  }
+
+  .form-container input,
+  .form-container textarea {
+    font-size: 0.95rem; /* Slightly smaller inputs */
+  }
+
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mini Laptops (901px to 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .franchise-section {
+    gap: 25px; /* Slightly larger gaps */
+    padding: 20px;
+  }
+
+  .franchise-model, .franchise-form {
+    flex: 1; /* Balanced space */
+    padding: 20px;
+  }
+
+  .form-container {
+    grid-template-columns: 1fr 1fr; /* Maintain grid layout */
+  }
+
+  .form-container button {
+    width: 80%;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
