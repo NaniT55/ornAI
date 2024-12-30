@@ -19,6 +19,7 @@ import { ActivityData } from "@/Data/activityData";
 import UserDetailsForm from "@/component/UserDetailsForm/UserDetailsForm";
 import PopularServiceSection from "@/component/service/PopularServiceSection";
 import NavbarSection2 from "@/component/navbar/NavbarSection2";
+import { ActivityType, BlogType, CategoryType, CourseType, ServiceType, TeamType } from "@/types";
 
 interface ClientWrapperProps {
   teamData: TeamType[];
@@ -61,10 +62,10 @@ const ClientWrapper: React.FC<ClientWrapperProps> = ({
 
   return (
     <div className="home_3">
-      
+
         {/* <NewNavbar /> */}
         <BannerSection3 />
-      
+
       {isPopupVisible && (
         <UserDetailsForm onClose={() => setIsPopupVisible(false)} />
       )}
@@ -84,7 +85,7 @@ const ClientWrapper: React.FC<ClientWrapperProps> = ({
         faqSubHead=""
         faqDescription=""
       />
-      {serviceData && <PopularServiceSection serviceData={serviceData} />}
+      {/* {serviceData && <PopularServiceSection serviceData={serviceData} />} */}
       <FooterSection2 style="tf__footer_3" logo="images/footer_logo3.png" />
       <VideoModal />
       <ScrollToTopButton style="style-3" />

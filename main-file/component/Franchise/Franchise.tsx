@@ -15,6 +15,10 @@ import { servicesData } from "@/Data/franchisePartnerData";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { franchiseBenifits } from "@/types";
 import { franchiseBenefits } from "@/Data/franchiseBenifits";
+import FranchiseForm from "../form/FranchiseForm";
+import FranchiseModel from "./FranchiseModel";
+import PopularServiceSection from "@/component/service/PopularServiceSection";
+
 interface Props {
   benefit: franchiseBenifits[];
 }
@@ -24,7 +28,7 @@ const Franchise = () => {
       <section className="franchise__banner tf__banner_3">
         <div className="container">
           <div className="row">
-            <div className="col-xl-8 col-md-10 col-lg-8">
+            <div className="col-xl-8 col-md-10 col-lg-8 col-sm-12">
               <div className="tf__banner_text wow fadeInUp">
                 {/* <h5>Welcome to ORN-AI</h5> */}
                 <h1>
@@ -51,8 +55,17 @@ const Franchise = () => {
           </div>
         </div>
       </section>
-
       {servicesData && <PopularServiceSection2 services={servicesData} />}
+      <section className="franchise-section">
+      <div className="franchise-model">
+        <FranchiseModel />
+      </div>
+      <div className="franchise-form">
+        <FranchiseForm />
+      </div>
+    </section>
+
+      
       {/* <section className="section4">
         <div>
           <h1 className="heading">Our Franchise Model</h1>
@@ -110,7 +123,7 @@ const Franchise = () => {
           </div>
         </div>
       </section> */}
-      <section className="section4">
+      {/* <section className="section4">
         <div>
           <h1 className="heading">Our Franchise Model</h1>
         </div>
@@ -135,7 +148,7 @@ const Franchise = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* <section className="section4">
         <div>
@@ -186,12 +199,13 @@ const Franchise = () => {
 
       <section>
         {/* {CourseData && <CourseSection2 courseData={CourseData} />} */}
-        {FranchiseData && (
+        {/* {FranchiseData && (
           <Franchise2
             style="tf__activities_3 tf__activities_slider_area mt_100 pt_95 pb_100"
             franchiseData={FranchiseData}
           />
-        )}
+        )} */}
+        {FranchiseData && <PopularServiceSection serviceData={FranchiseData} />}
       </section>
     </main>
   );
