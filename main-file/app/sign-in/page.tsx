@@ -5,7 +5,7 @@ import BreadcrumbSection from '@/component/breadcrumb/BreadcrumbSection'
 import LoginSection from '@/component/authentication/LoginSection'
 
 export const metadata: Metadata = {
-    title: "Log In",
+    title: "ORN-AI LOGIN",
     description: "Developed by Vlack Solutions",
   }
 const page = () => {
