@@ -13,14 +13,15 @@ export const metadata: Metadata = {
 const page = async () => {
   return (
     <Layout>
-      <BreadcrumbSection
+      {/* <BreadcrumbSection
         header="Franchise"
         title="Franchise"
         showBackground={false}
-      />
-      <section className="tf__about_us_page mt_195 xs_mt_100">
+      /> */}
+      {/* <section className="tf__about_us_page mt_195 xs_mt_100">
         <Franchise />
-      </section>
+      </section> */}
+      <Franchise />
     </Layout>
   );
 };

@@ -1,9 +1,4 @@
-/* 
-***************************************
-Template Name: Eduor || Online Education Learning Next JS Template
-Version: 1.0
-Description: Eduor is a Online Education Next JS Template. It is designed for online education learning you are a you can discover many new awesome features in this template. Best for e-Learning, online courses, Online academy, Online Institute, Online School, College, University, and Online Instructor Websites. It fits perfectly on various displays and resolutions from regular desktop screens to tablets, iPads, iPhones and small mobile devices.
-***************************************
+/*
 
 CSS INDEX
 ===================================
@@ -10950,6 +10945,50 @@ section.tf__counter_3 {
     color: #333;
     font-weight: 500;
   }
+
+  .navbar-dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    min-width: 200px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+    z-index: 100;
+  }
+  
+  .navbar-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .dropdown-menu li {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .dropdown-menu li:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-menu li:hover {
+    background: #f5f5f5;
+  }
+  
+  .dropdown-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
 }
 
 /* Tablet Styles (768px to 1024px) */
@@ -11832,7 +11871,7 @@ li span {
 }
 
 .franchise__banner {
-  margin-top: -350px;
+  margin-top: 80px;
   height: 700px;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -11852,7 +11891,7 @@ li span {
 
 @media (max-width: 992px) {
   .franchise__banner {
-    margin-top: -250px; /* Adjust for smaller screens */
+    margin-top: 500px; /* Adjust for smaller screens */
     height: 500px; /* Reduced height for smaller screens */
     background-image: url(../images/franchise-banner.jpg); /* New background image for tablets */
   }
@@ -11866,7 +11905,7 @@ li span {
 /* Media Query for mobile (max-width: 768px) */
 @media (max-width: 768px) {
   .franchise__banner {
-    margin-top: -200px; /* Reduce margin for mobile */
+    margin-top: 200px;
     height: 600px; /* Further reduce height for mobile */
     /* background-image: url(../images/franchise-banner-mobile.jpg); */
     background-image: none;
@@ -11881,7 +11920,7 @@ li span {
 /* Media Query for small mobile devices (max-width: 576px) */
 @media (max-width: 576px) {
   .franchise__banner {
-    margin-top: -150px; /* Reduce margin for very small screens */
+    margin-top: 150px; /* Reduce margin for very small screens */
     height: 650px; /* Smaller height for very small screens */
     /* background-image: url(../images/franchise-banner-mobile.jpg);  */
     background-image: none;
@@ -11890,6 +11929,10 @@ li span {
   .franchise__banner_text {
     font-size: 12px; /* Smaller font size for very small screens */
     margin-left: 10px; /* Adjust left margin */
+  }
+
+  .cards-container {
+    display:block;
   }
 }
 
@@ -12468,4 +12511,209 @@ input {
   font-size: 1.1rem;
   color: green;
   margin-top: 20px;
+}
+
+/* Global CSS for Franchise Form */
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #E9F7FA;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.form-container label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container textarea {
+  resize: none;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: #0070f3;
+  box-shadow: 0 0 5px rgba(0, 112, 243, 0.5);
+  outline: none;
+}
+
+/* Highlight required fields with an asterisk */
+.form-container label.required::after {
+  content: " *";
+  color: red;
+  font-weight: bold;
+}
+
+/* Validation error styles */
+.form-container input.error,
+.form-container textarea.error {
+  border-color: red;
+  background-color: #ffe6e6;
+}
+
+/* Styling for <select> components */
+.form-container select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: white;
+  appearance: none; /* Removes default arrow for custom styling */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath fill='%23666' d='M4.646 6.646a.5.5 0 0 1 .708 0L8 9.293l2.646-2.647a.5.5 0 1 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container select:focus {
+  border-color: #0070f3;
+  box-shadow: 0 0 5px rgba(0, 112, 243, 0.5);
+  outline: none;
+}
+
+.form-container select.error {
+  border-color: red;
+  background-color: #ffe6e6;
+}
+
+.form-container select option {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Optional placeholder styling for the first disabled option */
+.form-container select option[disabled] {
+  color: #aaa;
+}
+
+.form-container small {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 3px;
+}
+
+.form-container button {
+  padding: 10px;
+  width: 80%;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background: #0a3981;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background: #005bb5;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row.full-width {
+  grid-column: 1 / span 2;
+  text-align: center;
+}
+
+
+
+/* styles/FranchiseSection.module.css */
+.franchise-section {
+  display: flex;
+  gap: 20px; /* Space between components */
+  padding: 20px;
+  background-color: #0A3981; /* Optional background color */
+}
+
+.franchise-model, .franchise-form {
+  flex: 1; /* Equal width for both components */
+  padding: 15px;
+  /* border: 1px solid #ddd;  */
+  border-radius: 8px;
+  /* background-color: #fff; */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+
+/* FranchiseModel.css */
+.franchise-model {
+  padding: 20px;
+  /* background-color: #f9f9f9; */
+  /* border: 1px solid #ddd; */
+  border-radius: 8px;
+  margin-top: 30px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #ffffff;
+  text-align: start;
+}
+
+.points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tick-mark {
+  color: #4caf50; /* Green color for the tick mark */
+  font-size: 20px;
+  margin-top: 0px; /* Aligns the tick with text */
+}
+
+.list-content {
+  flex: 1;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 1rem;
+  color: #9AA6B2;
+  margin: 0;
+}
+
+.franchise-model hr{
+border-bottom: 2px solid #9AA6B2;
 }
