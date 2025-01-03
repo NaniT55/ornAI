@@ -12883,3 +12883,87 @@ hr {
     margin-top: 150px;
   }
 }
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+.about-1 {
+  max-width: 50%;
+  height: 60vh;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.about-1 img {
+  width: 40%;
+  height: auto;
+}
+.content {
+  max-width: 50%;
+  padding: 40px;
+  line-height: 2;
+}
+.content h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.about-section2 {
+  display: flex;
+  flex-direction: row; /* Align divs side-by-side */
+  align-items: flex-start; /* Align divs at the top */
+  justify-content: space-between; /* Space out divs evenly */
+  gap: 20px; /* Add space between divs */
+  padding: 50px; /* Add padding around the section */
+  /* Optional: Add a light background for aesthetics */
+  border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.about-section2 div {
+  flex: 1;
+  max-width: 50%;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.about-section2 h2 {
+  margin-bottom: 15px; /* Space below the heading */
+  font-size: 1.5rem; /* Adjust heading size */
+  color: #333; /* Dark color for headings */
+}
+
+.about-section2 p {
+  line-height: 1.8; /* Better readability */
+  font-size: 1rem; /* Adjust paragraph size */
+  color: #555; /* Slightly lighter text color */
+}
+
+.about-section2 .icon {
+  font-size: 42px;
+  padding: 5px;
+  background-color: rgb(219, 131, 241);
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.section-3 {
+  text-align: center;
+  padding: 50px;
+  background-color: rgb(233, 228, 228);
+  margin-bottom: -100px;
+}
+
+.section-3 p {
+  margin-top: 20px;
+}
+.section-3 img {
+  height: 500px !important;
+  width: auto !important;
+}
