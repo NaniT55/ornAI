@@ -1960,7 +1960,7 @@ button {
 }
 
 .tf__faq_accordion .accordion-header button::after {
-  background: url(../images/arrow_icon_1.png);
+  background: url(../images/arrow_icon-1.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1969,6 +1969,7 @@ button {
   position: absolute;
   top: 18px;
   right: 20px;
+  border-radius: 50%;
 }
 
 /* .tf__faq_accordion .accordion-button:not(.collapsed)::after { */
