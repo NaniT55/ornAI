@@ -22,6 +22,7 @@ import {
   getFaq,
   getService,
 } from "@/sanity/sanity.query";
+import AboutPage from "@/component/about/AboutPage";
 
 export const metadata: Metadata = {
   title: "About",
@@ -64,6 +65,7 @@ const page = async () => {
         )}
         {blogData && <BlogSection blogData={blogData} />}
       </section> */}
+      <AboutPage />
     </Layout>
   );
 };
