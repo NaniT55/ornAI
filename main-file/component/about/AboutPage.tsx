@@ -1,3 +1,4 @@
+import challengesData from "@/Data/challengesData";
 import React from "react";
 import { GoGoal } from "react-icons/go";
 import { LuTarget } from "react-icons/lu";
@@ -57,14 +58,9 @@ const AboutPage = () => {
             These include:
           </p>
           <ul>
-            <li>- False promises and high fees from unethical recruiters</li>
-            <li>- Short-term jobs without security or formal contracts</li>
-            <li>
-              - Insufficient training, leaving them unprepared for their roles
-            </li>
-            <li>- Lack of support post-placement</li>
-            <li>- Exploitation by fraudulent job channels</li>
-            <li>- Potential career damage from backdoor hiring practices</li>
+            {challengesData.map((challenge, index) => (
+              <li key={index}>- {challenge}</li>
+            ))}
           </ul>
         </div>
         <div className="about-1">
@@ -80,7 +76,7 @@ const AboutPage = () => {
             including CV writing, interview prep, skill upgrades, and networking
             opportunities, tailored to the European job market's demands.
           </p>
-          <img src="./images/about-3.png" alt="about-3" height={50} />
+          <img src="./images/about-3.png" alt="about-3" />
         </div>
       </section>
     </>

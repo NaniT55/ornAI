@@ -12804,7 +12804,6 @@ hr {
   margin-bottom: 20px;
 }
 
-/* Cards Container */
 .cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -12812,7 +12811,6 @@ hr {
   justify-content: center;
 }
 
-/* Individual Card */
 .card {
   display: flex;
   align-items: center;
@@ -12833,7 +12831,6 @@ hr {
   transform: scale(1.05);
 }
 
-/* Card Icon */
 .card-icon {
   font-size: 3rem;
   /* margin-right: 20px; */
@@ -12847,9 +12844,8 @@ hr {
   border-radius: 50%;
 }
 
-/* Card Content */
 .card-content {
-  flex: 1; /* Allow content to take up remaining space */
+  flex: 1;
 }
 
 .card-title {
@@ -12865,10 +12861,9 @@ hr {
   line-height: 1.5;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .card {
-    flex-direction: column; /* Stack icon and content vertically */
+    flex-direction: column;
     text-align: center;
   }
 
@@ -12917,13 +12912,13 @@ hr {
 
 .about-section2 {
   display: flex;
-  flex-direction: row; /* Align divs side-by-side */
-  align-items: flex-start; /* Align divs at the top */
-  justify-content: space-between; /* Space out divs evenly */
-  gap: 20px; /* Add space between divs */
-  padding: 50px; /* Add padding around the section */
-  /* Optional: Add a light background for aesthetics */
-  border-radius: 10px; /* Optional: Rounded corners */
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 50px;
+
+  border-radius: 10px;
 }
 
 .about-section2 div {
@@ -12936,15 +12931,15 @@ hr {
 }
 
 .about-section2 h2 {
-  margin-bottom: 15px; /* Space below the heading */
-  font-size: 1.5rem; /* Adjust heading size */
-  color: #333; /* Dark color for headings */
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
 }
 
 .about-section2 p {
-  line-height: 1.8; /* Better readability */
-  font-size: 1rem; /* Adjust paragraph size */
-  color: #555; /* Slightly lighter text color */
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #555;
 }
 
 .about-section2 .icon {
@@ -12964,7 +12959,17 @@ hr {
 .section-3 p {
   margin-top: 20px;
 }
-.section-3 img {
-  height: 500px !important;
-  width: auto !important;
+
+@media (max-width: 768px) {
+  .section-3 img {
+    height: auto !important;
+    width: 600px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-3 img {
+    height: 200px !important;
+    width: 250px !important;
+  }
 }
