@@ -27,6 +27,7 @@ export const metadata: Metadata = {
   title: "About",
   description: "Developed by Vlack Solutions",
 };
+
 const page = async () => {
   const serviceData: ServiceType[] = await getService();
   const courseData: CourseType[] = await getCourse();
