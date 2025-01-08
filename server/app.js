@@ -8,6 +8,7 @@ const authRoutes = require("./routes/authRoutes.js");
 const contactInfoRoutes = require("./routes/contactInfoRoutes.js");
 const enrollRoutes = require("./routes/enrollRoutes.js");
 const franchiseRoutes = require("./routes/franchiseRoutes.js");
+const subscribersRoutes = require("./routes/subscribersRoutes.js");
 
 //database
 const connectToDB = require("./db/connectToDB.js");
@@ -29,7 +30,8 @@ app.use(
 app.use("/auth", authRoutes);
 app.use("/contactForm", contactInfoRoutes);
 app.use("/enrollUserForm", enrollRoutes);
-app.use("/franchise", franchiseRoutes);
+app.use("/auth", franchiseRoutes);
+app.use("/auth", subscribersRoutes);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
