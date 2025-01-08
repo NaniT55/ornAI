@@ -66,6 +66,12 @@
 
 // export default ContactForm;
 
+
+
+
+
+
+
 "use client";
 import axios from "axios";
 import React, { useState } from "react";
@@ -76,7 +82,7 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleFormSubmit = async (e) => {
+  const handleFormSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault(); // Prevent form submission from reloading the page
 
     try {
